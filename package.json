@@ -29,7 +29,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-vue": "^4.5.0",
     "file-loader": "^1.1.4",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cheerio": "^0.6.3",
     "gulp-eslint": "^4.0.2",

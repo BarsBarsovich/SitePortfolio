@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./assets/images/bg.png") center center /cover no-repeat;
+    height: 100%;
+}
+
+.card__container{
+    width: 380px;
+    height: 395px;
+    background-color: #122620;
+    // opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card__container-logo{
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+}
+
+.card__container-author
+{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 500;
+}
