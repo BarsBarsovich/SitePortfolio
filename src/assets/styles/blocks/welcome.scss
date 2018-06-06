@@ -20,6 +20,7 @@
     width: 141px;
     height: 141px;
     border-radius: 50%;
+    align-self: center;
 }
 
 .card__container-author
@@ -28,4 +29,12 @@
     font-family: Roboto;
     font-size: 28px;
     font-weight: 500;
+}
+
+.card__text_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
