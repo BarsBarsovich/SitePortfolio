@@ -1,0 +1,144 @@
+.card{
+    background: url("./assets/images/bg.png") center center /cover no-repeat;
+    height: 100%;
+}
+
+.card__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+}
+
+.card__container{
+    width: 380px;
+    height: 395px;
+    background-color: rgba(18, 38, 32, 0.6);
+    // opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card__imgcontainer-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__container-logo{
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.card__container-author
+{
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.card__text_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__container-desc{
+    margin-top: 20px;
+    opacity: .8;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.social__container{
+    margin-top: 40px;
+}
+
+.social__list{
+    display: flex;
+}
+
+.social__item{
+    margin-right: 20px;
+}
+
+.social__nav-link{
+    color:#fff;
+    text-decoration: none;
+    
+}
+
+
+.btn__container{
+    margin-top: 41px;
+    height: 1%;
+}
+
+.btn__list{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn__item{
+    background: #6c9c5a;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    border-right: rgba(222, 227, 231, .5) 1px solid;
+    &:hover{
+        background: #4e8839;
+    }
+    &:last-child{
+        border-right: 0px;
+    }    
+}
+
+.btn__item-last{
+    border-right: 0px;
+}
+
+
+.btn__nav-link{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;    
+    text-decoration: none;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.social__svg{
+    fill:#8a9592;
+    height: 31px;
+    width: 40px;
+    &:hover{
+        fill:#4e8839;
+    }
+}
+
+
+.footer{
+    color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

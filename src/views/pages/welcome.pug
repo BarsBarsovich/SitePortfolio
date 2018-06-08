@@ -1,0 +1,40 @@
+extends ../auth.layout.pug
+
+block content
+  .wrapper
+     .card 
+      header.header
+        .header__container
+          btn.header__btn Авторизоваться         
+      .card__wrapper
+        .card__container
+          .card__content
+            .card__imgcontainer-img
+              img.card__container-logo(src="./assets/images/avatar.png")
+            .card__text_container
+              span.card__container-author Борис Дрябин
+              span.card__container-desc Личный сайт веб разработчика
+              .social__container
+                ul.social__list
+                  li.social__item
+                    a(href="#" class="social__nav-link")
+                      svg(class="social__svg") 
+                        use(xlink:href="./assets/images/icons/sprite.svg#vk") 
+                  li.social__item
+                    a(href="#" class="social__nav-link") 
+                      svg(class="social__svg") 
+                        use(xlink:href="./assets/images/icons/sprite.svg#github") 
+                  li.social__item
+                    a(href="#" class="social__nav-link") 
+                      svg(class="social__svg") 
+                        use(xlink:href="./assets/images/icons/sprite.svg#linkedin")                   
+          .btn__container
+            ul.btn__list
+              li.btn__item        
+                a(href="#1" class="btn__nav-link") Мои работы                          
+              li.btn__item        
+                a(href="#2" class="btn__nav-link") Обо мне                           
+              li.btn__item
+                a(href="#3" class="btn__nav-link") Блог      
+      .footer  © Борис Дрябин | создано с любовью в LoftSchool | 2018
+            
