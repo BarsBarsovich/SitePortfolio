@@ -1,10 +1,20 @@
-extends ../auth.layout.pug
+extends ../main.layout.pug
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .welcome__wrapper 
+        header.header
+            button.header__btn Авторизоваться
+        .welcome__card
+            .welcome__img
+                img(src="assets/images/avatar.png", alt="" class="welcome__logo")
+            .welcome__text
+                p.welcome__author Владимир Астахов
+                p.welcome__desc Личный сайт веб разработчика
+                ul.welcome__social 
+                    each item in ['vk', 'linkedin', 'github']
+                        li.welcome__item
+                            a(href="#" class="welcome__link") 
+                                +icon(item, 'welcome__social-svg')
+        footer.footer
+            p С любовью и старанием 
+    //- +icon('check', 'hello-world__block')
