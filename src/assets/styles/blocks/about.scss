@@ -1,0 +1,45 @@
+.about {
+    display: flex
+}
+
+.about__left {
+    width: 50%;
+    background: #ebefe2;
+}
+
+.about__right {
+    width: 50%;
+    background: #f4f5f0;
+}
+
+.block-title {
+    font-family: "SansusWebissimo";
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+    /* Text style for "О, бо мне" */
+    letter-spacing: 1.57px;
+}
+
+.block-subtitle {
+    color: #566358;
+    font-family: "SansusWebissimo";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41.01px;
+    text-transform: uppercase;
+}
+
+.user-description__avatar {
+    width: 443px;
+    height: 391px;
+}
+
+.text-content {
+    color: #566358;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.01px;
+}

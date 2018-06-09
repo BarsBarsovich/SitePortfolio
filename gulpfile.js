@@ -22,14 +22,18 @@ const paths = {
         dest: './build/assets/styles'
     },
     img: {
-        main: './src/assets/images/*',
+        main: './src/assets/images/**',
         dest: './build/assets/images'
+    }, 
+    fonts:{
+        main: './src/assets/fonts/*',
+        dest: './build/assets/fonts'
     }
 }
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite),
+    gulp.parallel(styles, templates, images, sprite, fonts),
     gulp.parallel(watch, server)
 ));
 
@@ -113,8 +117,15 @@ function sprite() {
 }
 
 
+function fonts(){
+    return gulp.src(paths.fonts.main)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
+
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.sprite = sprite;
+exports.fonts = fonts

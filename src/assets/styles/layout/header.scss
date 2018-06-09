@@ -1,10 +1,15 @@
-.header {
-    align-self: flex-end;
+.header{
+    padding-top: 20px;
 }
 
-.header__btn {
+.header__container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.header__btn{
     border: 1px solid #fff;
-    background: transparent;
     border-radius: 33px;
     color: #fff;
     padding: 4px 26px;
@@ -16,7 +21,7 @@
     width: 180px;
     margin-right: 48px;
     cursor: pointer;
-    &:hover {
+    &:hover{
         background: #4e8839;
     }
 }

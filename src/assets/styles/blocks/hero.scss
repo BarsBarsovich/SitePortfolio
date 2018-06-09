@@ -1,0 +1,12 @@
+.hero{
+    background: url("../images/bg.png") center center /cover no-repeat;
+    height: 100%;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25%;
+}
