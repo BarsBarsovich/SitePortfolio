@@ -8,5 +8,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 25%;
+    margin-top: 5%;
+}
+
+.hero__menu{
+    display: flex;
+    justify-content: flex-end;
 }

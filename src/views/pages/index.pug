@@ -1,31 +1,30 @@
 extends ../main.layout.pug
 
 block content
-  .wrapper
-     .card 
-      header.header
-        .header__container
-          btn.header__btn Авторизоваться         
-      .card__wrapper
-        .card__container
-          .card__content
-            .card__imgcontainer-img
-              img.card__container-logo(src="./assets/images/avatar.png")
-            .card__text_container
-              span.card__container-author Борис Дрябин
-              span.card__container-desc Личный сайт веб разработчика
-              .social__container
-                ul.social__list
-                    each item in ['vk', 'github', 'linkedin']
-                        li.social__item
-                            a(href="#" class="social__nav-link")
-                            +icon(item, 'social__svg')
-          .btn__container
-            ul.btn__list
-              li.btn__item        
-                a(href="my-works.html" class="btn__nav-link") Мои работы                          
-              li.btn__item        
-                a(href="about.html" class="btn__nav-link") Обо мне                           
-              li.btn__item
-                a(href="#3" class="btn__nav-link") Блог      
-      .footer  © Борис Дрябин | создано с любовью в LoftSchool | 2018
+    .card
+        header.header
+            .header__container
+                btn.header__btn Авторизоваться
+        .card__wrapper
+            .card__container
+                .user
+                    .user__pic
+                        img.user__pic-image(src="./assets/images/avatar.png")
+                    .user__description
+                        .user__name Борис Дрябин
+                        .user__info Личный сайт веб разработчика
+                        .social__container
+                            ul.social__list
+                                each item in ['vk', 'github', 'linkedin']
+                                    li.social__item
+                                        a(href="#" class="social__nav-link")
+                                        +icon(item, 'social__svg')
+                .btn__container
+                    ul.btn__list
+                        li.btn__item
+                            a(href="my-works.html" class="btn__nav-link") Мои работы
+                        li.btn__item
+                            a(href="about.html" class="btn__nav-link") Обо мне
+                        li.btn__item
+                            a(href="#3" class="btn__nav-link") Блог
+        .footer  © Борис Дрябин | создано с любовью в LoftSchool | 2018
