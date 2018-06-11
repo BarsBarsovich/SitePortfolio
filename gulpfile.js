@@ -5,7 +5,8 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     browserSync = require('browser-sync').create(),
-    gulpCopy = require('gulp-copy');
+    gulpCopy = require('gulp-copy'),
+    ghPages = require('gulp-gh-pages');
 
 const $gp = require("gulp-load-plugins")();
 
@@ -24,8 +25,8 @@ const paths = {
     img: {
         main: './src/assets/images/*',
         dest: './build/assets/images'
-    }, 
-    fonts:{
+    },
+    fonts: {
         main: './src/assets/fonts/*',
         dest: './build/assets/fonts'
     }
@@ -117,9 +118,15 @@ function sprite() {
 }
 
 
-function fonts(){
+function fonts() {
     return gulp.src(paths.fonts.main)
         .pipe(gulp.dest(paths.fonts.dest));
+}
+
+
+function deploy() {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
 }
 
 
@@ -129,3 +136,4 @@ exports.clean = clean;
 exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts
+exports.deploy = deploy;

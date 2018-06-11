@@ -1,6 +1,6 @@
 .about {
     display: flex;
-    position:relative;
+    position: relative;
 }
 
 .about__left {
@@ -13,7 +13,7 @@
     background: #f4f5f0;
 }
 
-.about__triangle_left{
+.about__triangle_left {
     content: '';
     display: block;
     padding-top: 10%;
@@ -22,17 +22,13 @@
     left: 0;
     bottom: 100%;
     background: #fff;
-    background:
-            linear-gradient(
-                            to top right,
-                            #ebefe2 0%,
-                            #ebefe2 50%,
-                            transparent calc(50% + 1px),
-                            transparent 100%
-            );
+    background: linear-gradient( to top right, #ebefe2 0%, #ebefe2 50%, transparent calc(50% + 1px), transparent 100%);
+    &-transparent {
+        background: linear-gradient( to top right, #fff 0%, #fff 50%, transparent calc(50% + 1px), transparent 100%);
+    }
 }
 
-.about__triangle_right{
+.about__triangle_right {
     content: '';
     display: block;
     padding-top: 10%;
@@ -41,14 +37,7 @@
     right: 0;
     bottom: 100%;
     background: #fff;
-    background:
-            linear-gradient(
-                            to top left,
-                            #fff 0%,
-                            #ffffff 50%,
-                            transparent calc(50% + 1px),
-                            transparent 100%
-            );
+    background: linear-gradient( to top left, #fff 0%, #ffffff 50%, transparent calc(50% + 1px), transparent 100%);
 }
 
 .block-title {
@@ -60,11 +49,11 @@
     letter-spacing: 1.57px;
     display: flex;
     justify-content: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     background: url("../images/about-header.png") center -36px/contain no-repeat;
     height: 125px;
     position: relative;
-    &:after{
+    &:after {
         background: currentColor;
         content: "";
         display: block;
@@ -88,8 +77,8 @@
     display: flex;
     justify-content: center;
     //margin-top: 49px;
-    position:relative;
-    &:after{
+    position: relative;
+    &:after {
         background: currentColor;
         content: "";
         display: block;
@@ -103,7 +92,7 @@
     }
 }
 
-.block-subtitle-margin-top{
+.block-subtitle-margin-top {
     text-align: center;
     margin-top: 8px;
 }
@@ -120,9 +109,8 @@
     padding-bottom: 20px;
 }
 
-.text-content-right{
+.text-content-right {
     width: 100%;
     margin-left: 40px;
     width: 81%;
 }
-
