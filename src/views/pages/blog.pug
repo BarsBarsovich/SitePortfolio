@@ -4,4 +4,20 @@ block variables
     - var title = 'Блог'
 
 block content
-    h1 "Блог"
+    .maincontent
+        section.hero
+            -
+                var socials = [
+                ['vk', 'http://vk.com'],
+                ['github', 'http://gh.com'],
+                ['linkedin', 'http://in.com']
+                ]
+            .hero__links
+                //.hero__title
+                    .section-title
+                .user
+                    .user__pic
+                        img.user__pic-image(src="./assets/images/avatar.png")
+                    .user__description
+                        .user__name Борис Дрябин
+                        .user__info Личный сайт веб разработчика
