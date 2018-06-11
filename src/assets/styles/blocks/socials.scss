@@ -7,3 +7,39 @@
 .socials__item{
     padding-right: 30px;
 }
+
+.social__svg{
+    fill:#8a9592;
+    height: 31px;
+    width: 40px;
+    cursor: pointer;
+    &:hover{
+        fill:#4e8839;
+    }
+    &-white{
+        fill:#fff;
+    }
+
+    &-arrow{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.social__container{
+    margin-top: 40px;
+}
+
+.social__list{
+    display: flex;
+}
+
+.social__item{
+    margin-right: 20px;
+}
+
+.social__nav-link{
+    color:#fff;
+    text-decoration: none;
+
+}
