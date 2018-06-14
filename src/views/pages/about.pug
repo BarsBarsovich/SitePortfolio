@@ -47,6 +47,7 @@ block content
                 .block-subtitle Кто я
               .user-description__text.text-content
                 p Я веб разработчик из Москвы. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.    Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
       .about__right
         .triangle
@@ -54,14 +55,14 @@ block content
           //svg.triangle.triangle_fill_beige
 
         .about__right-title
-          .block-subtitle.block-subtitle-margin-top Чем я могу быть<br> вам полезен
+          .block-subtitle.block-subtitle-margin-top Чем я могу быть<br/> вам полезен
         .about__right-description.text-content.text-content-right
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .about__right-content
           -
             var skills = [
-              ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript <br>& jQuery', 70]]],
-              ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js& npm', 70],['MongoDB', 70]]],
+              ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript <br/> jQuery', 70]]],
+              ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js <br/> npm', 70],['MongoDB', 70]]],
               ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
             ]
 
@@ -75,7 +76,7 @@ block content
                       .skill(data-percents="70")
                         svg(viewBox="0 0 122 122" width="122" height="122").b-skill-svg
                           circle(class="b-skill-svg__circle-base" r="50" cx="50%" cy="50%")
-                          circle(class="b-skill-svg__circle-progress" r="50" cx="50%" cy="50%" stroke-dasharray="#{skill[1]} #{skill[1]}" transform="rotate(-90 61 61)")
+                          circle(class="b-skill-svg__circle-progress" r="50" cx="50%" cy="50%" stroke-dasharray=`${skill[1]} 360` transform="rotate(-90 61 61)")
                         .skill__title #{skill[0]}
 
 
