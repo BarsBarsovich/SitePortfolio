@@ -13,32 +13,6 @@
     background: #f4f5f0;
 }
 
-.about__triangle_left {
-    content: '';
-    display: block;
-    padding-top: 10%;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    background: #fff;
-    background: linear-gradient( to top right, #ebefe2 0%, #ebefe2 50%, transparent calc(50% + 1px), transparent 100%);
-    &-transparent {
-        background: linear-gradient( to top right, #fff 0%, #fff 50%, transparent calc(50% + 1px), transparent 100%);
-    }
-}
-
-.about__triangle_right {
-    content: '';
-    display: block;
-    padding-top: 10%;
-    width: 50%;
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    background: #fff;
-    background: linear-gradient( to top left, #fff 0%, #ffffff 50%, transparent calc(50% + 1px), transparent 100%);
-}
 
 .block-title {
     font-family: "SansusWebissimo";
