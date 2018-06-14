@@ -1,5 +1,6 @@
 .about {
-    display: flex
+    display: flex;
+    position: relative;
 }
 
 .about__left {
@@ -12,6 +13,7 @@
     background: #f4f5f0;
 }
 
+
 .block-title {
     font-family: "SansusWebissimo";
     font-size: 63px;
@@ -21,7 +23,22 @@
     letter-spacing: 1.57px;
     display: flex;
     justify-content: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    background: url("../images/about-header.png") center -36px/contain no-repeat;
+    height: 125px;
+    position: relative;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 86%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
 }
 
 .block-subtitle {
@@ -33,15 +50,25 @@
     text-transform: uppercase;
     display: flex;
     justify-content: center;
+    //margin-top: 49px;
+    position: relative;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 117%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
 }
 
-.user-description__image{
-    display: flex;
-    justify-content: center;
-}
-.user-description__avatar {
-    width: 443px;
-    height: 391px;
+.block-subtitle-margin-top {
+    text-align: center;
+    margin-top: 8px;
 }
 
 .text-content {
@@ -50,4 +77,14 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24.01px;
+    margin-top: 31px;
+    margin-left: 80px;
+    width: 66%;
+    padding-bottom: 20px;
+}
+
+.text-content-right {
+    width: 100%;
+    margin-left: 40px;
+    width: 81%;
 }

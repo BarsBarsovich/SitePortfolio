@@ -1,5 +1,5 @@
 module.exports = {
-  white: "#efeee9",
+  triangleColor: "#fff",
   beige: "#eeebdf",
   green: "#16c2aa",
   "text-color": "#455a64",

@@ -21,25 +21,6 @@
     flex-direction: column;
 }
 
-.social__container{
-    margin-top: 40px;
-}
-
-.social__list{
-    display: flex;
-}
-
-.social__item{
-    margin-right: 20px;
-}
-
-.social__nav-link{
-    color:#fff;
-    text-decoration: none;
-    
-}
-
-
 .btn__container{
     margin-top: 41px;
     height: 1%;
@@ -82,21 +63,6 @@
     display: flex;
     align-items: center;
 }
-
-.social__svg{
-    fill:#8a9592;
-    height: 31px;
-    width: 40px;
-    cursor: pointer;
-    &:hover{
-        fill:#4e8839;
-    }
-    &-white{
-        fill:#fff;
-    }
-}
-
-
 
 .footer{
     color: #fff;
