@@ -52,7 +52,6 @@ function templates() {
 
 //copy images
 function images() {
-    console.log(paths.img.main);
     return gulp
         .src(paths.img.main)
         .pipe(gulp.dest(paths.img.dest));
