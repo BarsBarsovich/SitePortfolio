@@ -4,8 +4,15 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 "Мои работы"
+    //- h1 "Мои работы"
     //- include ../common/slider.pug
+    .works.hero
+        .user
+            .user__pic
+                img.user__pic-image(src="./assets/images/avatar.png")
+            .user__description
+                .user__name Борис Дрябин
+                .user__info Личный сайт веб разработчика
 
 block scripts
     //- script(src='assets/scripts/works.bundle.js')
