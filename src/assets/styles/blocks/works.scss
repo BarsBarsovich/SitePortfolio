@@ -1,0 +1,49 @@
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.works__title {
+    font-family: "SansusWebissimo";
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: url("../images/works-header.png") center -36px/contain no-repeat;
+    height: 125px;
+    position: relative;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 86%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
+}
+
+.works__container {
+    display: flex;
+    width: 100%;
+}
+
+.works__left {
+    width: 50%;
+    background: #ebefe2;
+}
+
+.works__right {
+    width: 50%;
+    background: #e1e4d7;
+}

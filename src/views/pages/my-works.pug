@@ -4,15 +4,33 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    //- h1 "Мои работы"
-    //- include ../common/slider.pug
-    .works.hero
-        .user
-            .user__pic
-                img.user__pic-image(src="./assets/images/avatar.png")
-            .user__description
-                .user__name Борис Дрябин
-                .user__info Личный сайт веб разработчика
+    .maincontent
+        include ../blocks/hero.pug
+
+        section.works
+            .triangle
+                .triangle__left.triangle__left-transparent
+            .title мои работы
+            .works__container
+                .works__left
+                    .works__left-container
+                        .block__title Сайт школы онлайн Образования
+                .works__right 
+                    .triangle
+                        .triangle__right
+                    .works__right-container
+                        .slider
+                            .slider__img-container
+                                img(src="./assets/images/works.png", alt="").slider__logo
+                            .slider__arrows
+                                .slider__left
+                                    img(src="./assets/images/page-down.png", alt="")
+                                .slider__right
+                                    img(src="./assets/images/page-up.png", alt="")
+                        //- .block__title Сайт школы онлайн Образования 
+
+        section.talks
+            include ../blocks/footer__about.pug
 
 block scripts
     //- script(src='assets/scripts/works.bundle.js')
