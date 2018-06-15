@@ -1,0 +1,30 @@
+.talks{
+    background: url("../images/talks/task.bg.png") top center /cover no-repeat;
+    height: 100%;
+}
+
+
+.talks__container{
+    height: 100%;
+}
+
+.talks__container-left,
+.talks__container-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.talks__container__text{
+    color: #5d5a55;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.talks__wrapper{
+    display: flex;   
+    flex-basis: 1; 
+}
