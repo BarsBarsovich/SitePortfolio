@@ -12,7 +12,7 @@
 
 .card__container {
     width: 380px;
-    height: 395px;
+    // min-height: 426px;
     background-color: rgba(18, 38, 32, 0.6);
     // opacity: 0.6;
     display: flex;
@@ -23,6 +23,11 @@
 .btn__container {
     margin-top: 41px;
     height: 1%;
+}
+
+.btn__container-margin{
+    margin-top: -81px;
+    
 }
 
 .btn__list {
@@ -78,4 +83,8 @@
     display: flex;
     text-align: center;
     justify-content: center;
+}
+
+.btn__list-padding{
+    padding-top: 20px;
 }

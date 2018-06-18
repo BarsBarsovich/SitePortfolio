@@ -6,25 +6,60 @@ block content
             .header__container
                 btn.header__btn Авторизоваться
         .card__wrapper
-            .card__container
-                .user
-                    .user__pic
-                        img.user__pic-image(src="./assets/images/avatar.png")
-                    .user__description
-                        .user__name Борис Дрябин
-                        .user__info Личный сайт веб разработчика
-                        .social__container
-                            ul.social__list
-                                each item in ['vk', 'github', 'linkedin']
-                                    li.social__item
-                                        a(href="#" class="social__nav-link")
-                                        +icon(item, 'social__svg')
-                .btn__container
-                    ul.btn__list
-                        li.btn__item
-                            a(href="my-works.html" class="btn__nav-link") Мои работы
-                        li.btn__item
-                            a(href="about.html" class="btn__nav-link") Обо мне
-                        li.btn__item
-                            a(href="blog.html" class="btn__nav-link") Блог
+            .card__front
+                //- .card__container
+                    //- .user
+                    //-     .user__pic
+                    //-         img.user__pic-image(src="./assets/images/avatar.png")
+                    //-     .user__description
+                    //-         .user__name Борис Дрябин
+                    //-         .user__info Личный сайт веб разработчика
+                    //-         .social__container
+                    //-             ul.social__list
+                    //-                 each item in ['vk', 'github', 'linkedin']
+                    //-                     li.social__item
+                    //-                         a(href="#" class="social__nav-link")
+                    //-                         +icon(item, 'social__svg')
+                    //- .btn__container
+                    //-     ul.btn__list
+                    //-         li.btn__item
+                    //-             a(href="my-works.html" class="btn__nav-link") Мои работы
+                    //-         li.btn__item
+                    //-             a(href="about.html" class="btn__nav-link") Обо мне
+                    //-         li.btn__item
+                    //-             a(href="blog.html" class="btn__nav-link") Блог
+            .card__back
+                .card__container
+                    .block-subtitle.block-subtitle-auth Авторизуйтесь
+                    .card__back_login-container
+                        label(for="login" class="card__back-label")
+                        img(src="./assets/images/login-icon.png", alt="").card__back-input-logo-user
+                        input(placeholder="Логин" name="login" id="login").card__back-input
+                        label(for="password" class="card__back-label")
+                        img(src="./assets/images/password-icon.png", alt="").card__back-input-logo-pass
+                        input(placeholder="Пароль" name="password" id="password").card__back-input
+                    .card__back-checkbox-container                                            
+                        input(type="checkbox" id="notRobot" class="card__back-checkbox")
+                        label(for="notRobot" class="card__back-label_checkbox") Я человек
+                    //- .radio
+                    .radio__container
+                        .card__back-title Вы точно не робот
+                        .card__back__label-container
+                            label.radio__label
+                                input(type="radio" class="radio" name="radio-test")
+                                span.radio-custom
+                                span.label Да
+                            
+                            label.radio__second-label
+                                input(type="radio" class="radio" name="radio-test")
+                                span.radio-custom
+                                span.label Не уверен
+                                        
+                    .btn__container
+                        ul.btn__list.btn__list-padding
+                            li.btn__item.btn__item-width
+                                a(href="/" class="btn__nav-link") На главную
+                            li.btn__item.btn__item-width
+                                a(href="about.html" class="btn__nav-link") Войти
+                  
         .footer  © Борис Дрябин | создано с любовью в LoftSchool | 2018
