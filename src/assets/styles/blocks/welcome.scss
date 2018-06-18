@@ -30,6 +30,10 @@
     justify-content: space-between;
 }
 
+.btn__list-full-width{
+    width: 112%;
+}
+
 .btn__item {
     background: #6c9c5a;
     cursor: pointer;
@@ -49,6 +53,11 @@
 .btn__item-last {
     border-right: 0px;
 }
+
+.btn__item-width{
+    width: 50%;
+}
+
 
 .btn__nav-link {
     color: #ffffff;

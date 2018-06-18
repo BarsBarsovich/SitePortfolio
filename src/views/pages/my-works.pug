@@ -10,7 +10,7 @@ block content
         section.works
             .triangle
                 .triangle__left.triangle__left-transparent
-            .title мои работы
+            .block-title мои работы
             .works__container
                 .works__left
                     .works__left-container
@@ -26,18 +26,19 @@ block content
                     .works__right-container
                         .slider
                             .slider__img-container
-                                img(src="./assets/images/works.png", alt="").slider__logo
+                                img(src="./assets/images/works.png", alt="").slider__logo                                
                             .slider__arrows
                                 .slider__left
                                     img(src="./assets/images/page-down.png", class="slider__left-logo" alt="")
+                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
                                 .slider__right
-                                    img(src="./assets/images/page-up.png",
-                                    class="slider__right-logo" alt="")
+                                    img(src="./assets/images/page-up.png",class="slider__right-logo" alt="")
+                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
                         //- .block__title Сайт школы онлайн Образования 
 
         section.talks
             .talks__container
-                .block-title Что обо мне <br/>говорят
+                .block-title.block-title-margin Что обо мне <br/>говорят
                 .talks__wrapper
                     .talks__container-left 
                         .talks__container__item
@@ -55,7 +56,29 @@ block content
                         .talks__container__item__user
                             .talks__item_text-author Сабанцев Владимир
                             .talks__item_text-desc — преподаватель
-            include ../blocks/footer__about.pug
+                .talks__form_container
+                    .talks__form
+                        form.talks__form__form                      
+                            .talks__form_container_inner                          
+                                .block-subtitle Связаться со мной
+                                label(for="name" class="talks__form_nolabel")
+                                input(placeholder="Имя" id="name" name="name").talks__form__input 
+                                label(for="email" class="talks__form_nolabel")
+                                input(placeholder="Email" id="email" name="email").talks__form__input 
+                                label(for="text" class="talks__form_nolabel")
+                                textarea(id="text" name="text" placeholder="Ваше сообщение").talks__form__area
+                                .btn__container.talks__form_container_inner
+                                    ul.btn__list.btn__list-full-width
+                                        li.btn__item.btn__item-width
+                                            a(href="#" class="btn__nav-link") Отправить
+                                        li.btn__item.btn__item-width
+                                            a(href="#" class="btn__nav-link") Очистить
+                .talks__arrow
+                    +icon('portf_arrow_down', 'arrow_up')
+
+
+
+            include ../blocks/footer__about.pug 
 
 block scripts
     //- script(src='assets/scripts/works.bundle.js')

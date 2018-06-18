@@ -23,7 +23,7 @@ const paths = {
         dest: './build/assets/styles'
     },
     img: {
-        main: './src/assets/images/*',
+        main: './src/assets/images/**',
         dest: './build/assets/images'
     },
     fonts: {
