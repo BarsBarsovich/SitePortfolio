@@ -9,14 +9,176 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="works"> 
-        <div class="user">
-          <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
-          <div class="user__description">
-            <div class="user__name">Борис Дрябин</div>
-            <div class="user__info">Личный сайт веб разработчика</div>
+      <div class="maincontent">
+        <section class="hero">
+          <div class="hero__links">
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link" href="http://vk.com">
+                  <svg class="social__svg social__svg-white">
+                    <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="http://gh.com">
+                  <svg class="social__svg social__svg-white">
+                    <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="http://in.com">
+                  <svg class="social__svg social__svg-white">
+                    <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="hero__menu">
+              <button class="hamburger"><span class="hamburger__span"></span></button>
+            </div>
+            <div class="hero__title">
+              <div class="section-title">
+                <div class="user">
+                  <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
+                  <div class="user__description">
+                    <div class="user__name">Борис Дрябин</div>
+                    <div class="user__info">Личный сайт веб разработчика</div>
+                  </div>
+                </div>
+              </div>
+            </div><a class="down-btn hero__down-btns" href="#">
+              <svg class="arrow_down">
+                <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+              </svg></a>
           </div>
-        </div>
+        </section>
+        <section class="works">
+          <div class="triangle">
+            <div class="triangle__left triangle__left_transparent"></div>
+          </div>
+          <div class="block-title">мои работы</div>
+          <div class="works__container">
+            <div class="works__left">
+              <div class="works__left-container">
+                <div class="block-subtitle">Сайт школы онлайн <br/> Образования</div>
+                <div class="works__left-title">HTML , CSS, JAVASCRIPT</div>
+                <div class="works__left__btn"><img class="works__left__btn-icon" src="./assets/images/link.png" alt="">
+                  <button class="works__left__btn-button">Посмотреть сайт</button>
+                </div>
+              </div>
+            </div>
+            <div class="works__right"> 
+              <div class="triangle">
+                <div class="triangle__right triangle__right_transparent"></div>
+              </div>
+              <div class="works__right-container">
+                <div class="slider">
+                  <div class="slider__img-container"><img class="slider__logo" src="./assets/images/works.png" alt=""></div>
+                  <div class="slider__arrows">
+                    <div class="slider__left"><img class="slider__left-logo" src="./assets/images/page-down.png" alt="">
+                      <svg class="arrow__slider arrow__slider-left">
+                        <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+                      </svg>
+                    </div>
+                    <div class="slider__right"><img class="slider__right-logo" src="./assets/images/page-up.png" alt="">
+                      <svg class="arrow__slider arrow__slider-right">
+                        <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="talks">
+          <div class="talks__container">
+            <div class="block-title block-title-margin">Что обо мне <br/>говорят</div>
+            <div class="talks__wrapper">
+              <div class="talks__container-left"> 
+                <div class="talks__container__item"><img class="talks__item_logo" src="./assets/images/talks/kovaldn.png" alt=""></div>
+                <div class="talks__container-text">
+                  <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только   самых тяжелых испытаний и бессонных ночей!  </p>
+                </div>
+                <div class="talks__container__item-user">
+                  <div class="talks__item-text-author">Ковальчук Дмитрий</div>
+                  <div class="talks__item-text-desc">— основатель Loftschool</div>
+                </div>
+              </div>
+              <div class="talks__container-right">
+                <div class="talks__container__item"><img class="talks__item_logo" src="./assets/images/talks/wowua.png" alt=""></div>
+                <div class="talks__container-text">
+                  <p>Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах! </p>
+                </div>
+                <div class="talks__container__item-user">
+                  <div class="talks__item-text-author">Сабанцев Владимир</div>
+                  <div class="talks__item-text-desc">— преподаватель</div>
+                </div>
+              </div>
+            </div>
+            <div class="talks__form-container">
+              <div class="talks__form">
+                <form class="talks__form__form">                     
+                  <div class="talks__form-container_inner">                         
+                    <div class="block-subtitle">Связаться со мной</div>
+                    <label class="talks__form-label" for="name"></label>
+                    <input class="talks__form-input" placeholder="Имя" id="name" name="name">
+                    <label class="talks__form-label" for="email"></label>
+                    <input class="talks__form-input" placeholder="Email" id="email" name="email">
+                    <label class="talks__form-label" for="text"></label>
+                    <textarea class="talks__form__area" id="text" name="text" placeholder="Ваше сообщение"></textarea>
+                    <div class="btn__container talks__form-container_inner">
+                      <ul class="btn__list btn__list-full-width">
+                        <li class="btn__item btn__item-width"><a class="btn__nav-link" href="#">Отправить</a></li>
+                        <li class="btn__item btn__item-width"><a class="btn__nav-link" href="#">Очистить</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="talks__arrow">
+              <svg class="arrow_up">
+                <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+              </svg>
+            </div>
+          </div>
+          <footer class="footer footer__about">
+            <div class="footer__row">
+              <div class="footer__col">
+                <div class="footer__desc">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+              </div>
+              <div class="footer__col">
+                <nav class="menu">
+                  <ul class="menu__list">
+                    <li class="menu__item">               <a class="menu__item-link menu__link" href="my-work.html">Мои работы</a></li>
+                    <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
+                    <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
+                    <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
+                  </ul>
+                  <ul class="socials socials-margin">
+                    <li class="socials__item"><a class="socials__link" href="http://vk.com">
+                        <svg class="social__svg-about">
+                          <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="http://gh.com">
+                        <svg class="social__svg-about">
+                          <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="http://in.com">
+                        <svg class="social__svg-about">
+                          <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
+                        </svg></a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__col">
+                <div class="footer__container">
+                  <div class="footer__text-citate">
+                    <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</p>
+                  </div>
+                  <div class="footer__text-author">— Martin Golding</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__row">
+              <div class="footer__content"><span>© Борис Дрябин | Создано с любовью в LoftSchool | 2016</span></div>
+            </div>
+          </footer>
+        </section>
       </div>
       <!--include ./common/footer.pug-->
     </div>

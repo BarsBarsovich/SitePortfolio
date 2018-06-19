@@ -9,46 +9,82 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="card">
+      <div class="card hero">
         <header class="header">
           <div class="header__container">
-            <btn class="header__btn">Авторизоваться</btn>
+            <button class="header__btn">Авторизоваться</button>
           </div>
         </header>
         <div class="card__wrapper">
-          <div class="card__container">
-            <div class="user">
-              <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
-              <div class="user__description">
-                <div class="user__name">Борис Дрябин</div>
-                <div class="user__info">Личный сайт веб разработчика</div>
-                <div class="social__container">
-                  <ul class="social__list">
-                    <li class="social__item"><a class="social__nav-link" href="#"></a>
-                      <svg class="social__svg">
-                        <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-                      </svg>
-                    </li>
-                    <li class="social__item"><a class="social__nav-link" href="#"></a>
-                      <svg class="social__svg">
-                        <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-                      </svg>
-                    </li>
-                    <li class="social__item"><a class="social__nav-link" href="#"></a>
-                      <svg class="social__svg">
-                        <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
-                      </svg>
-                    </li>
+          <div class="card__front">
+            <div class="card__container">
+              <div class="user">
+                <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
+                <div class="user__description">
+                  <div class="user__name">Борис Дрябин</div>
+                  <div class="user__info">Личный сайт веб разработчика</div>
+                  <div class="social__container">
+                    <ul class="social__list">
+                      <li class="social__item"><a class="social__nav-link" href="#"></a>
+                        <svg class="social__svg">
+                          <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                        </svg>
+                      </li>
+                      <li class="social__item"><a class="social__nav-link" href="#"></a>
+                        <svg class="social__svg">
+                          <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                        </svg>
+                      </li>
+                      <li class="social__item"><a class="social__nav-link" href="#"></a>
+                        <svg class="social__svg">
+                          <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="btn">
+                <div class="btn__container">
+                  <ul class="btn__list">
+                    <li class="btn__item"><a class="btn__nav-link" href="my-works.html">Мои работы</a></li>
+                    <li class="btn__item"><a class="btn__nav-link" href="about.html">Обо мне</a></li>
+                    <li class="btn__item"><a class="btn__nav-link" href="blog.html">Блог</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="btn__container">
-              <ul class="btn__list">
-                <li class="btn__item"><a class="btn__nav-link" href="my-works.html">Мои работы</a></li>
-                <li class="btn__item"><a class="btn__nav-link" href="about.html">Обо мне</a></li>
-                <li class="btn__item"><a class="btn__nav-link" href="blog.html">Блог</a></li>
-              </ul>
+          </div>
+          <div class="card__back">
+            <div class="card__container">
+              <div class="block-subtitle block-subtitle-auth">Авторизуйтесь</div>
+              <div class="card__back-login-container">
+                <label class="card__back-label visually-hidden" for="login">логин</label><img class="card__back-input-logo-user" src="./assets/images/login-icon.png" alt="">
+                <input class="card__back-input" placeholder="Логин" name="login" id="login">
+                <label class="card__back-label visually-hidden" for="password">пароль</label><img class="card__back-input-logo-pass" src="./assets/images/password-icon.png" alt="">
+                <input class="card__back-input" placeholder="Пароль" name="password" id="password">
+              </div>
+              <div class="card__back-checkbox-container">                                           
+                <input class="card__back-checkbox" type="checkbox" id="notRobot">
+                <label class="card__back-label_checkbox" for="notRobot">Я человек</label>
+              </div>
+              <div class="radio__container">
+                <div class="card__back-title">Вы точно не робот</div>
+                <div class="card__back__label-container">
+                  <label class="radio__label visually-hidden">Да
+                    <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Да</span>
+                  </label>
+                  <label class="radio__second-label visually-hidden">не уверен
+                    <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Не уверен</span>
+                  </label>
+                </div>
+              </div>
+              <div class="btn__container">
+                <ul class="btn__list btn__list-padding">
+                  <li class="btn__item btn__item-width"><a class="btn__nav-link" href="/">На главную</a></li>
+                  <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
