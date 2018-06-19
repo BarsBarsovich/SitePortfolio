@@ -9,7 +9,7 @@ block content
 
         section.works
             .triangle
-                .triangle__left.triangle__left-transparent
+                .triangle__left.triangle__left_transparent
             .block-title мои работы
             .works__container
                 .works__left
@@ -22,7 +22,7 @@ block content
 
                 .works__right 
                     .triangle
-                        .triangle__right
+                        .triangle__right.triangle__right_transparent
                     .works__right-container
                         .slider
                             .slider__img-container
@@ -43,31 +43,31 @@ block content
                     .talks__container-left 
                         .talks__container__item
                             img(src="./assets/images/talks/kovaldn.png", alt="").talks__item_logo
-                        .talks__container__text
+                        .talks__container-text
                             p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только   самых тяжелых испытаний и бессонных ночей!  
-                        .talks__container__item__user
-                            .talks__item_text-author Ковальчук Дмитрий
-                            .talks__item_text-desc — основатель Loftschool
+                        .talks__container__item-user
+                            .talks__item-text-author Ковальчук Дмитрий
+                            .talks__item-text-desc — основатель Loftschool
                     .talks__container-right
                         .talks__container__item
                             img(src="./assets/images/talks/wowua.png", alt="").talks__item_logo
-                        .talks__container__text
+                        .talks__container-text
                             p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах! 
-                        .talks__container__item__user
-                            .talks__item_text-author Сабанцев Владимир
-                            .talks__item_text-desc — преподаватель
-                .talks__form_container
+                        .talks__container__item-user
+                            .talks__item-text-author Сабанцев Владимир
+                            .talks__item-text-desc — преподаватель
+                .talks__form-container
                     .talks__form
                         form.talks__form__form                      
-                            .talks__form_container_inner                          
+                            .talks__form-container_inner                          
                                 .block-subtitle Связаться со мной
-                                label(for="name" class="talks__form_nolabel")
-                                input(placeholder="Имя" id="name" name="name").talks__form__input 
-                                label(for="email" class="talks__form_nolabel")
-                                input(placeholder="Email" id="email" name="email").talks__form__input 
-                                label(for="text" class="talks__form_nolabel")
+                                label(for="name" class="talks__form-label")
+                                input(placeholder="Имя" id="name" name="name").talks__form-input 
+                                label(for="email" class="talks__form-label")
+                                input(placeholder="Email" id="email" name="email").talks__form-input 
+                                label(for="text" class="talks__form-label")
                                 textarea(id="text" name="text" placeholder="Ваше сообщение").talks__form__area
-                                .btn__container.talks__form_container_inner
+                                .btn__container.talks__form-container_inner
                                     ul.btn__list.btn__list-full-width
                                         li.btn__item.btn__item-width
                                             a(href="#" class="btn__nav-link") Отправить

@@ -4,7 +4,7 @@ block content
     .card.hero
         header.header
             .header__container
-                btn.header__btn Авторизоваться
+                button.header__btn Авторизоваться
         .card__wrapper
             .card__front
                 .card__container
@@ -20,22 +20,23 @@ block content
                                         li.social__item
                                             a(href="#" class="social__nav-link")
                                             +icon(item, 'social__svg')
-                    .btn__container
-                        ul.btn__list
-                            li.btn__item
-                                a(href="my-works.html" class="btn__nav-link") Мои работы
-                            li.btn__item
-                                a(href="about.html" class="btn__nav-link") Обо мне
-                            li.btn__item
-                                a(href="blog.html" class="btn__nav-link") Блог
+                    .btn
+                        .btn__container
+                            ul.btn__list
+                                li.btn__item
+                                    a(href="my-works.html" class="btn__nav-link") Мои работы
+                                li.btn__item
+                                    a(href="about.html" class="btn__nav-link") Обо мне
+                                li.btn__item
+                                    a(href="blog.html" class="btn__nav-link") Блог
             .card__back
                 .card__container
                     .block-subtitle.block-subtitle-auth Авторизуйтесь
-                    .card__back_login-container
-                        label(for="login" class="card__back-label")
+                    .card__back-login-container
+                        label(for="login" class="card__back-label visually-hidden") логин
                         img(src="./assets/images/login-icon.png", alt="").card__back-input-logo-user
                         input(placeholder="Логин" name="login" id="login").card__back-input
-                        label(for="password" class="card__back-label")
+                        label(for="password" class="card__back-label visually-hidden") пароль
                         img(src="./assets/images/password-icon.png", alt="").card__back-input-logo-pass
                         input(placeholder="Пароль" name="password" id="password").card__back-input
                     .card__back-checkbox-container                                            
@@ -45,12 +46,12 @@ block content
                     .radio__container
                         .card__back-title Вы точно не робот
                         .card__back__label-container
-                            label.radio__label
+                            label.radio__label.visually-hidden Да
                                 input(type="radio" class="radio" name="radio-test")
                                 span.radio-custom
                                 span.label Да
                             
-                            label.radio__second-label
+                            label.radio__second-label.visually-hidden не уверен
                                 input(type="radio" class="radio" name="radio-test")
                                 span.radio-custom
                                 span.label Не уверен

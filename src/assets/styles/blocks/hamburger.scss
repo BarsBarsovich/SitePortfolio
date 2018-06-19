@@ -1,6 +1,4 @@
 .hamburger{
-  //border: 1px solid #fff;
-  //border-radius: 50%;
   height: 50px;
   width: 50px;
   display: block;
@@ -9,8 +7,10 @@
   position: relative;
   margin-top: -47px;
   margin-right: 30px;
+  background: none;
+  border: none;
+  outline: none;
 }
-
 
 .hamburger__span{
   display: block;

@@ -14,6 +14,11 @@
     background-size: contain;
 }
 
+.hero__links{
+    position: relative;
+    height: 95%;
+}
+
 .hero__menu{
     display: flex;
     justify-content: flex-end;
@@ -29,8 +34,11 @@
 }
 
 .down-btn{
-    display: block;
-    margin-top: 500px;
+    display: block;    
     z-index: 30;
     text-align: center;
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    transform: translateX(-50%);
 }

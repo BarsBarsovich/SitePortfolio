@@ -38,6 +38,12 @@ gulp.task('default', gulp.series(
     gulp.parallel(watch, server)
 ));
 
+
+gulp.task('build', gulp.series(
+    clean, 
+    gulp.parallel(styles, templates, images, sprite, fonts)
+));
+
 function watch() {
     gulp.watch(paths.styles.styles, styles);
     gulp.watch(paths.templates.pages, templates);
