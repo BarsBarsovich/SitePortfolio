@@ -23,7 +23,7 @@ const paths = {
         dest: './build/assets/styles'
     },
     img: {
-        main: './src/assets/images/*',
+        main: './src/assets/images/**',
         dest: './build/assets/images'
     },
     fonts: {
@@ -36,6 +36,12 @@ gulp.task('default', gulp.series(
     clean,
     gulp.parallel(styles, templates, images, sprite, fonts),
     gulp.parallel(watch, server)
+));
+
+
+gulp.task('build', gulp.series(
+    clean, 
+    gulp.parallel(styles, templates, images, sprite, fonts)
 ));
 
 function watch() {
@@ -52,7 +58,6 @@ function templates() {
 
 //copy images
 function images() {
-    console.log(paths.img.main);
     return gulp
         .src(paths.img.main)
         .pipe(gulp.dest(paths.img.dest));

@@ -6,31 +6,7 @@ block variables
 
 block content
   .maincontent
-    section.hero
-      -
-        var socials = [
-          ['vk', 'http://vk.com'],
-          ['github', 'http://gh.com'],
-          ['linkedin', 'http://in.com']
-        ]
-      .hero__links
-        ul.socials
-          each item in socials
-            li.socials__item
-              a(href=item[1]).socials__link
-                +icon(item[0], 'social__svg social__svg-white')
-        .hero__menu
-          a(href="").hamburger
-            span.hamburger__span
-
-        .hero__title
-          .section-title
-            .user
-              .user__pic
-                img.user__pic-image(src="./assets/images/avatar.png")
-              .user__description
-                .user__name Борис Дрябин
-                .user__info Личный сайт веб разработчика
+    include ../blocks/hero.pug
 
     section.about
       .about__left
@@ -101,4 +77,4 @@ block content
                   .contacts-row.contacts__icon
                     +icon(item[0], 'contacts__icon-img')
                   .contacts-row.contacts__info #{item[1]}
-    include ../blocks/footer__about.pug
+      include ../blocks/footer__about.pug

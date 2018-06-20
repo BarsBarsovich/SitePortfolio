@@ -1,0 +1,39 @@
+.arrow_up{
+    width: 26px;
+    height: 16px;
+    fill:#c6c6c4;
+    transform: rotate(-180deg);
+    cursor: pointer;
+}
+
+
+.arrow_down{
+    width: 26px;
+    height: 16px;
+    fill:#c6c6c4;
+    cursor: pointer;
+
+}
+
+
+.arrow__slider{
+    fill:#fff;
+    width: 43px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.arrow__slider-left{
+    position: absolute;
+    left: 61%;
+    top: 86%;
+    cursor: pointer;
+}
+
+.arrow__slider-right{
+    position: absolute;
+    top: 86%;
+    right: 12%;
+    transform: rotate(180deg);
+    cursor:pointer;
+}

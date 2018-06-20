@@ -1,0 +1,4 @@
+@mixin blog__title($path) {
+    background: url($imgPath) 50%/contain no-repeat;
+    width: 100%;
+}

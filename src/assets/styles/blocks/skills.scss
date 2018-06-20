@@ -1,47 +1,51 @@
 .skills-list {
-  margin-left: 37px;
-  margin-top: -74px;
+    margin-left: 37px;
+    margin-top: -74px;
 }
 
 .skills-row__list {
-  display: flex;
+    display: flex;
 }
 
 .skills-row__title {
-  color: #566358;
-  font-family: Roboto;
-  font-size: 28px;
-  font-weight: 500;
-  position: relative;
-  margin-top: 76px;
+    color: #566358;
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 76px;
 }
 
 .skill__title {
-  color: #4e8839;
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 29.39px;
-  text-transform: uppercase;
-  //position: relative;
-  margin-top: -78px;
-  margin-left: 48px;
+    color: #4e8839;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 29.39px;
+    text-transform: uppercase;
+    //position: relative;
+    margin-top: -78px;
+    margin-left: 48px;
 }
 
 .skills-row__item {
-  padding-right: 35px;
+    padding-right: 35px;
 }
 
 .b-skill-svg__circle-base {
-  stroke: #dfdcd5;
+    stroke: #dfdcd5;
 }
 
-
 .b-skill-svg__circle-progress {
-  stroke: #1bb696;
+    stroke: #1bb696;
 }
 
 .b-skill-svg {
-  fill: none;
-  stroke-width: 22;
+    fill: none;
+    stroke-width: 22;
+}
+
+.skill__figure {
+    height: 100px;
+    width: 100px;
 }

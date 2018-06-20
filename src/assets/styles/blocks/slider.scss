@@ -1,0 +1,38 @@
+.slider__arrows {
+    display: flex;
+}
+
+.slider__logo {
+    width: 479px;
+    height: 311px;
+}
+
+.slider__img-container {
+    margin-top: 110px;
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 110px;
+}
+
+.slider__left,
+.slider__right {
+    width: 50%;
+}
+
+.slider__right-logo,
+.slider__left-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.works__left-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

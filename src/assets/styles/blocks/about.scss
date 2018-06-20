@@ -13,7 +13,6 @@
     background: #f4f5f0;
 }
 
-
 .block-title {
     font-family: "SansusWebissimo";
     font-size: 63px;
@@ -27,6 +26,7 @@
     background: url("../images/about-header.png") center -36px/contain no-repeat;
     height: 125px;
     position: relative;
+    text-align: center;
     &:after {
         background: currentColor;
         content: "";
@@ -39,6 +39,11 @@
         transform: translateX(-50%);
         width: 89px;
     }
+}
+
+.block-title-margin{
+    margin-top: 70px;
+    padding-bottom:10px; 
 }
 
 .block-subtitle {
@@ -64,11 +69,18 @@
         transform: translateX(-50%);
         width: 89px;
     }
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .block-subtitle-margin-top {
     text-align: center;
     margin-top: 8px;
+}
+
+.block-subtitle-auth{
+    color:#fff;
+    margin-top: 34px;
 }
 
 .text-content {

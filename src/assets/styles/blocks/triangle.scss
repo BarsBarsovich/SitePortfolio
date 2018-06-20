@@ -8,7 +8,7 @@
     bottom: 100%;
     background: #fff;
     background: linear-gradient( to top right, #ebefe2 0%, #ebefe2 50%, transparent calc(50% + 1px), transparent 100%);
-    &-transparent {
+    &_transparent {
         background: linear-gradient( to top right, #fff 0%, #fff 50%, transparent calc(50% + 1px), transparent 100%);
     }
 }
@@ -22,5 +22,8 @@
     right: 0;
     bottom: 100%;
     background: #fff;
-    background: linear-gradient( to top left, #fff 0%, #ffffff 50%, transparent calc(50% + 1px), transparent 100%);
+    background: linear-gradient( to top left, #f4f5f0 0%, #f4f5f0 50%, transparent calc(50% + 1px), transparent 100%);
+    &_transparent {
+        background: linear-gradient( to top left, #ffff 0%, #ffff 50%, transparent calc(50% + 1px), transparent 100%);
+    }
 }

@@ -4,8 +4,81 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 "Мои работы"
-    //- include ../common/slider.pug
+    .maincontent
+        include ../blocks/hero.pug
+
+        section.works
+            .triangle
+                .triangle__left.triangle__left_transparent
+            .block-title мои работы
+            .works__container
+                .works__left
+                    .works__left-container
+                        .block-subtitle Сайт школы онлайн <br/> Образования
+                        .works__left-title HTML , CSS, JAVASCRIPT
+                        .works__left__btn
+                            img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
+                            button.works__left__btn-button Посмотреть сайт
+
+                .works__right 
+                    .triangle
+                        .triangle__right.triangle__right_transparent
+                    .works__right-container
+                        .slider
+                            .slider__img-container
+                                img(src="./assets/images/works.png", alt="").slider__logo                                
+                            .slider__arrows
+                                .slider__left
+                                    img(src="./assets/images/page-down.png", class="slider__left-logo" alt="")
+                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
+                                .slider__right
+                                    img(src="./assets/images/page-up.png",class="slider__right-logo" alt="")
+                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
+                        //- .block__title Сайт школы онлайн Образования 
+
+        section.talks
+            .talks__container
+                .block-title.block-title-margin Что обо мне <br/>говорят
+                .talks__wrapper
+                    .talks__container-left 
+                        .talks__container__item
+                            img(src="./assets/images/talks/kovaldn.png", alt="").talks__item_logo
+                        .talks__container-text
+                            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только   самых тяжелых испытаний и бессонных ночей!  
+                        .talks__container__item-user
+                            .talks__item-text-author Ковальчук Дмитрий
+                            .talks__item-text-desc — основатель Loftschool
+                    .talks__container-right
+                        .talks__container__item
+                            img(src="./assets/images/talks/wowua.png", alt="").talks__item_logo
+                        .talks__container-text
+                            p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах! 
+                        .talks__container__item-user
+                            .talks__item-text-author Сабанцев Владимир
+                            .talks__item-text-desc — преподаватель
+                .talks__form-container
+                    .talks__form
+                        form.talks__form__form                      
+                            .talks__form-container_inner                          
+                                .block-subtitle Связаться со мной
+                                label(for="name" class="talks__form-label")
+                                input(placeholder="Имя" id="name" name="name").talks__form-input 
+                                label(for="email" class="talks__form-label")
+                                input(placeholder="Email" id="email" name="email").talks__form-input 
+                                label(for="text" class="talks__form-label")
+                                textarea(id="text" name="text" placeholder="Ваше сообщение").talks__form__area
+                                .btn__container.talks__form-container_inner
+                                    ul.btn__list.btn__list-full-width
+                                        li.btn__item.btn__item-width
+                                            a(href="#" class="btn__nav-link") Отправить
+                                        li.btn__item.btn__item-width
+                                            a(href="#" class="btn__nav-link") Очистить
+                .talks__arrow
+                    +icon('portf_arrow_down', 'arrow_up')
+
+
+
+            include ../blocks/footer__about.pug 
 
 block scripts
     //- script(src='assets/scripts/works.bundle.js')
