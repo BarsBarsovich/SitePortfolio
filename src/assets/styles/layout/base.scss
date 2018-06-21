@@ -26,6 +26,9 @@ body {
 .maincontent {
     overflow-y: scroll;
     height: 100vh;
+    @include tablets() {
+        overflow-x: hidden;
+    }
 }
 
 button {
