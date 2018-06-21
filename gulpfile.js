@@ -6,7 +6,9 @@ const gulp = require('gulp'),
     del = require('del'),
     browserSync = require('browser-sync').create(),
     gulpCopy = require('gulp-copy'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    gcmq = require('gulp-group-css-media-queries');
+
 
 const $gp = require("gulp-load-plugins")();
 
@@ -40,7 +42,7 @@ gulp.task('default', gulp.series(
 
 
 gulp.task('build', gulp.series(
-    clean, 
+    clean,
     gulp.parallel(styles, templates, images, sprite, fonts)
 ));
 
@@ -69,6 +71,7 @@ function styles() {
         .pipe(sourcemaps.init())
         .pipe(postcss(require("./postcss.config")))
         .pipe(sourcemaps.write())
+        .pipe(gcmq())
         .pipe(rename("main.min.css"))
         .pipe(gulp.dest(paths.styles.dest));
 }
