@@ -4,6 +4,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    height: 100vh;
 }
 
 .works__title {
@@ -36,6 +37,7 @@
 .works__container {
     display: flex;
     width: 100%;
+    // grid-template: "works__left-container slider__img-container" 70% "works__left-container slider__arrows" 30% / 1fr 1fr;
 }
 
 .works__left {
@@ -57,11 +59,11 @@
     background: #e1e4d7;
 }
 
-.works__left__btn{
+.works__left__btn {
     position: relative;
 }
 
-.works__left__btn-button{
+.works__left__btn-button {
     margin-top: 16px;
     width: 201px;
     height: 45px;
@@ -73,9 +75,8 @@
     padding-left: 10px;
 }
 
-.works__left__btn-icon{
+.works__left__btn-icon {
     position: absolute;
     top: 47%;
     left: 6%;
-
 }

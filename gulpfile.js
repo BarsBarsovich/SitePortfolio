@@ -7,7 +7,12 @@ const gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     gulpCopy = require('gulp-copy'),
     ghPages = require('gulp-gh-pages'),
-    gcmq = require('gulp-group-css-media-queries');
+    gcmq = require('gulp-group-css-media-queries'),
+    webpack = require("webpack"),
+    $webpack = require("webpack-stream");
+
+
+const reload = browserSync.reload;
 
 
 const $gp = require("gulp-load-plugins")();
@@ -27,6 +32,10 @@ const paths = {
     img: {
         main: './src/assets/images/**',
         dest: './build/assets/images'
+    },
+    js: {
+        main: './src/assets/scripts/**/*.js',
+        dest: './build/assets/scripts'
     },
     fonts: {
         main: './src/assets/fonts/*',
@@ -137,6 +146,16 @@ function deploy() {
         .pipe(ghPages());
 }
 
+function scripts() {
+    return gulp
+        .src(paths.js.main)
+        .pipe($gp.plumber())
+        .pipe($webpack(require("./webpack.mpa.config"), webpack))
+        .pipe(gulp.dest(paths.js.dest))
+        .pipe(reload({ stream: true }));
+}
+
+
 
 exports.templates = templates;
 exports.styles = styles;
@@ -145,3 +164,4 @@ exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts
 exports.deploy = deploy;
+exports.scripts = scripts;
