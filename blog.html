@@ -5,7 +5,8 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | Блог</title>
-    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -107,12 +108,76 @@
               </div>
             </div>
             <div class="footer__row">
-              <div class="footer__content"><span>© Борис Дрябин | Создано с любовью в LoftSchool | 2016</span></div>
+              <div class="footer__content"><span class="footer__content--author">© Борис Дрябин |</span><span class="footer__content--desc">Создано с любовью в LoftSchool | 2018</span></div>
             </div>
           </footer>
         </section>
       </div>
-      <!--include ./common/footer.pug-->
     </div>
+    <script type="text/x-template" id="skills-list">
+      <ul class="skills-list">
+        <li class="skills-list__item" v-for="skill in skills">
+          <skills-row :skill="skill"></skills-row>
+        </li>
+      </ul>
+    </script>
+    <script type="text/x-template" id="skills-row">
+      <div class="skllls-row">
+        <div class="skills-row__title">{{skill.skillsGroup}}</div>
+        <ul class="skills">
+          <li class="skills-list__item" v-for="(skillPercents, skillName) in skill.skills">
+            <skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+          </li>
+        </ul>
+      </div>
+    </script>
+    <script type="text/x-template" id="skill">
+      <div class="skill">
+        <svg class="b-skill-svg" viewBox="0 0 122 122" width="122" height="122" preserveAspectRatio="none">
+          <circle class="b-skill-svg__circle-base" cx="50" cy="50" r="40"></circle>
+          <circle class="b-skill-svg__circle-progress" cx="50" cy="50" r="40" ref="color-circle"></circle>
+        </svg>
+        <div class="skill__title">{{ skillName }} </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider">
+      <div class="slider">
+        <info :work="currentWork"></info>
+        <display :work="currentWork"></display>
+        <buttons :works="works" :currentIndex="currentIndex" @slide="handleSlide"></buttons>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-info">
+      <div class="slider__info-container">
+        <div class="slider__info">
+          <div class="slider__info-title">
+            <div class="subtitle">{{work.title}}</div>
+          </div><img src="/default.jpg" srcset="/large.png 1000w, med.png 768px, min.png 480w" sizes="(max-width: 768px) 300px, (max-width: 1000) 800px" alt="">
+          <transition-group appear :css="false" @before-enter="callback('before-enter')" @after-enter="callback('after-enter')" @enter="enterHandler">
+            <div class="slider__info-skills" :key="work.skills">{{work.skills}}</div>
+          </transition-group>
+          <div class="slider__info-button"><a class="button" :href="work.link" target="_blank">Посмотреть сайт</a></div>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-display">
+      <div class="slider__display"><img class="slider__big-pic" :src="work.photo"></div>
+    </script>
+    <script type="text/x-template" id="slider-buttons">
+      <div class="slider__buttons">
+        <div class="slider__button" @click="slide('prev')">
+          <transition-group class="slider__button-img-container" name="slide-down" tag="div">
+            <div class="slider__button-img-wrap" :key="getReqImage('prev').photo"><img class="slider__button-pic" :src="getReqImage('prev').photo" alt=""></div>
+          </transition-group>
+        </div>
+        <div class="slider__button slider__button--next" @click="slide('next')">
+          <transition-group class="slider__button-img-container" name="slide-up" tag="div">
+            <div class="slider__button-img-wrap" :key="getReqImage('next').photo"><img class="slider__button-pic" :src="getReqImage('next').photo" alt=""></div>
+          </transition-group>
+        </div>
+      </div>
+    </script>
+    <script src="./assets/scripts/bootloader.bundle.js"></script>
+    <script src="./assets/scripts/vendor.bundle.js"></script>
   </body>
 </html>

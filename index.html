@@ -5,92 +5,310 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | </title>
-    <link rel="stylesheet" href="assets/styles/main.min.css">
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="card hero">
-        <header class="header">
-          <div class="header__container">
-            <button class="header__btn">Авторизоваться</button>
-          </div>
-        </header>
-        <div class="card__wrapper">
-          <div class="card__front">
-            <div class="card__container">
-              <div class="user">
-                <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
-                <div class="user__description">
-                  <div class="user__name">Борис Дрябин</div>
-                  <div class="user__info">Личный сайт веб разработчика</div>
-                  <div class="social__container">
-                    <ul class="social__list">
-                      <li class="social__item"><a class="social__nav-link" href="#"></a>
-                        <svg class="social__svg">
-                          <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-                        </svg>
-                      </li>
-                      <li class="social__item"><a class="social__nav-link" href="#"></a>
-                        <svg class="social__svg">
-                          <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-                        </svg>
-                      </li>
-                      <li class="social__item"><a class="social__nav-link" href="#"></a>
-                        <svg class="social__svg">
-                          <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
-                        </svg>
-                      </li>
+      <div class="maincontent">
+        <div id="card">
+          <header class="header">
+            <div class="header__container">
+              <button class="header__btn">Авторизоваться</button>
+            </div>
+          </header>
+          <div class="card__wrapper">
+            <div class="card__front">
+              <div class="card__container">
+                <div class="user">
+                  <div class="user__pic"><img class="user__pic-image" src="./assets/images/avatar.png"></div>
+                  <div class="user__description">
+                    <div class="user__name">Борис Дрябин</div>
+                    <div class="user__info">Личный сайт веб разработчика</div>
+                    <div class="social__container">
+                      <ul class="social__list">
+                        <li class="social__item"><a class="social__nav-link" href="#"></a>
+                          <svg class="social__svg">
+                            <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                          </svg>
+                        </li>
+                        <li class="social__item"><a class="social__nav-link" href="#"></a>
+                          <svg class="social__svg">
+                            <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                          </svg>
+                        </li>
+                        <li class="social__item"><a class="social__nav-link" href="#"></a>
+                          <svg class="social__svg">
+                            <use xlink:href="./assets/images/icons/sprite.svg#linkedin"></use>
+                          </svg>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn">
+                  <div class="btn__container">
+                    <ul class="btn__list">
+                      <li class="btn__item"><a class="btn__nav-link" href="works.html">Мои работы</a></li>
+                      <li class="btn__item"><a class="btn__nav-link" href="about.html">Обо мне</a></li>
+                      <li class="btn__item"><a class="btn__nav-link" href="blog.html">Блог</a></li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="btn">
+            </div>
+            <div class="card__back">
+              <div class="card__container">
+                <div class="block-subtitle block-subtitle-auth">Авторизуйтесь</div>
+                <div class="card__back-login-container">
+                  <label class="card__back-label visually-hidden" for="login">логин</label><img class="card__back-input-logo-user" src="./assets/images/login-icon.png" alt="">
+                  <input class="card__back-input" placeholder="Логин" name="login" id="login">
+                  <label class="card__back-label visually-hidden" for="password">пароль</label><img class="card__back-input-logo-pass" src="./assets/images/password-icon.png" alt="">
+                  <input class="card__back-input" placeholder="Пароль" name="password" id="password">
+                </div>
+                <div class="card__back-checkbox-container">                                           
+                  <input class="card__back-checkbox" type="checkbox" id="notRobot">
+                  <label class="card__back-label_checkbox" for="notRobot">Я человек</label>
+                </div>
+                <div class="radio__container">
+                  <div class="card__back-title">Вы точно не робот</div>
+                  <div class="card__back__label-container">
+                    <label class="radio__label visually-hidden">Да
+                      <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Да</span>
+                    </label>
+                    <label class="radio__second-label visually-hidden">не уверен
+                      <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Не уверен</span>
+                    </label>
+                  </div>
+                </div>
                 <div class="btn__container">
-                  <ul class="btn__list">
-                    <li class="btn__item"><a class="btn__nav-link" href="my-works.html">Мои работы</a></li>
-                    <li class="btn__item"><a class="btn__nav-link" href="about.html">Обо мне</a></li>
-                    <li class="btn__item"><a class="btn__nav-link" href="blog.html">Блог</a></li>
+                  <ul class="btn__list btn__list-padding">
+                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="/">На главную</a></li>
+                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card__back">
-            <div class="card__container">
-              <div class="block-subtitle block-subtitle-auth">Авторизуйтесь</div>
-              <div class="card__back-login-container">
-                <label class="card__back-label visually-hidden" for="login">логин</label><img class="card__back-input-logo-user" src="./assets/images/login-icon.png" alt="">
-                <input class="card__back-input" placeholder="Логин" name="login" id="login">
-                <label class="card__back-label visually-hidden" for="password">пароль</label><img class="card__back-input-logo-pass" src="./assets/images/password-icon.png" alt="">
-                <input class="card__back-input" placeholder="Пароль" name="password" id="password">
-              </div>
-              <div class="card__back-checkbox-container">                                           
-                <input class="card__back-checkbox" type="checkbox" id="notRobot">
-                <label class="card__back-label_checkbox" for="notRobot">Я человек</label>
-              </div>
-              <div class="radio__container">
-                <div class="card__back-title">Вы точно не робот</div>
-                <div class="card__back__label-container">
-                  <label class="radio__label visually-hidden">Да
-                    <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Да</span>
-                  </label>
-                  <label class="radio__second-label visually-hidden">не уверен
-                    <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Не уверен</span>
-                  </label>
-                </div>
-              </div>
-              <div class="btn__container">
-                <ul class="btn__list btn__list-padding">
-                  <li class="btn__item btn__item-width"><a class="btn__nav-link" href="/">На главную</a></li>
-                  <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
-                </ul>
-              </div>
+          <div class="footer footer__about">
+            <div class="footer__row">
+              <div class="footer__content footer__content--nocolor"><span class="footer__content--author">© Борис Дрябин |</span><span class="footer__content--desc">Создано с любовью в LoftSchool | 2018</span></div>
             </div>
           </div>
         </div>
-        <div class="footer"> © Борис Дрябин | создано с любовью в LoftSchool | 2018</div>
+        <script id="vertexShader" type="x-shader/x-vertex">
+          varying vec2 v_position;
+          uniform vec2 u_size;
+          uniform vec2 u_resolution;
+          
+          void main() {
+              v_position = (position.xy+1.0)*0.5;
+              gl_Position =  vec4(position, 1.0);
+          }
+          
+        </script>
+        <script id="fragmentShader" type="x-shader/x-fragment">
+          uniform float u_time;
+          varying vec2 v_position;
+          uniform sampler2D u_image;
+          uniform sampler2D u_maps;
+          uniform vec2 u_mouse;
+          uniform float u_dpi;
+          uniform vec2 u_resolution;
+          
+          vec2 pos(){
+              return vec2(0.0,0.0);
+          }
+          
+          vec4 blend(vec4 bg,vec4 fg){
+          vec3 bgm=bg.rgb*bg.a;
+          vec3 fgm=fg.rgb*fg.a;
+          float ia=1.0-fg.a;
+          float a=(fg.a + bg.a * ia);
+          vec3 rgb;
+          if(a!=0.0){
+              rgb=(fgm + bgm * ia) / a;
+          }else{
+              rgb=vec3(0.0,0.0,0.0);
+          }
+          return vec4(rgb,a);
+          }
+          vec2 pixel(){
+          return vec2(1.0*1.0)/u_resolution;
+          }
+          float wave(float x,float freq, float speed){
+          return sin(x*freq+((u_time*(3.1415/2.0))*speed));
+          }
+          vec2 waves(vec2 pos){
+          vec4 maps=texture2D(u_maps,pos);
+          float mask=maps.r;
+          float y=maps.g;
+          float y2=pow(y,2.0);
+          
+          vec2 intensity=vec2(
+              0.5-(y2*0.5),
+              0.2+(y2*1.8)
+          )*pixel();
+          
+          vec2 waves=vec2(
+              wave(y,400.0-(y2*200.0),-0.03), 
+              wave(y,400.0-(y2*400.0*0.05),-0.045)
+              +wave(y,900.0-(y2*900.0*0.05),-0.05)
+              +wave(pos.x,20.0+(y2*20.0*1.5),-0.01)
+          );
+          return pos+(waves*intensity*mask);
+          }
+          vec2 depth(vec2 pos){
+          vec2 intensity=vec2(0.01,0.01);
+          float d=0.05-pow(texture2D(u_maps,pos).b,1.0);
+          return pos+(intensity*u_mouse*d);
+          }
+          
+          void main(){
+              vec2 pos=v_position.xy;
+              vec2 turbulence=depth(waves(pos));
+              vec2 noTurbulence=depth(pos);
+              vec4 c=texture2D(u_image,turbulence);
+          
+              gl_FragColor=vec4(c.rgb,1.0);
+          }
+          
+        </script>
+        <script>
+          var container;
+          var camera, scene, renderer;
+          var uniforms;
+          var mouse = {x:0, y:0};
+          var loader = new THREE.TextureLoader();
+          
+          init();
+          animate();
+          
+          function init() {
+              container = document.getElementById( 'card' );
+              
+              camera = new THREE.Camera();
+              //camera = new THREE.PerspectiveCamera(145, window.innerWidth / window.innerHeight, 1, 5000 );
+              camera.position.z = 1;
+              scene = new THREE.Scene();
+              var geometry = new THREE.PlaneBufferGeometry( 2, 2 );
+          
+              var MyTexture = loader.load( "./assets/images/bg.png" );
+              var mapTexture = loader.load( "./assets/images/water-maps.jpg" );
+              MyTexture.minFilter = THREE.LinearFilter;
+          
+              uniforms = {
+                  u_time: { type: "f", value: 1.0 },
+                  u_animation: { type: "f", value: 0.0 },
+                  u_mouse: { type: "v2", value: new THREE.Vector2() },
+                  u_resolution: { type: "v2", value: new THREE.Vector2() },
+                  u_size: {type:"v2", value: new THREE.Vector2(MyTexture.width,MyTexture.height) },
+                  u_image: {value:MyTexture },
+                  u_maps: {value:mapTexture}
+              };
+              var material = new THREE.ShaderMaterial( {
+                  uniforms: uniforms,
+                  vertexShader: document.getElementById( 'vertexShader' ).textContent,
+                  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+              } );
+              var mesh = new THREE.Mesh( geometry, material );
+              scene.add( mesh );
+              renderer = new THREE.WebGLRenderer();
+              renderer.setPixelRatio( window.devicePixelRatio );
+              
+              container.appendChild( renderer.domElement );
+              onWindowResize();
+              window.addEventListener( 'resize', onWindowResize, false );
+          }
+          function onWindowResize( event ) {
+              renderer.setSize( window.innerWidth, window.innerHeight );
+              uniforms.u_resolution.value.x = renderer.domElement.width;
+              uniforms.u_resolution.value.y = renderer.domElement.height;
+              uniforms.u_mouse.value.x = mouse.x;
+              uniforms.u_mouse.value.y = mouse.y;
+          }
+          function animate() {
+              requestAnimationFrame( animate );
+              render();
+          }
+          function render() {
+              uniforms.u_time.value += 1.0;
+              renderer.render( scene, camera );
+          }
+          
+          document.addEventListener('mousemove',function(event){
+              TweenLite.to(uniforms.u_mouse.value, 1, {
+                  x: ((event.pageX / window.innerWidth) - 0.5) * 1.5,
+                  y: ((event.pageY / window.innerHeight)- 0.5) * 1.5
+              })
+          })
+        </script>
       </div>
-      <!--include ./common/footer.pug-->
     </div>
+    <script type="text/x-template" id="skills-list">
+      <ul class="skills-list">
+        <li class="skills-list__item" v-for="skill in skills">
+          <skills-row :skill="skill"></skills-row>
+        </li>
+      </ul>
+    </script>
+    <script type="text/x-template" id="skills-row">
+      <div class="skllls-row">
+        <div class="skills-row__title">{{skill.skillsGroup}}</div>
+        <ul class="skills">
+          <li class="skills-list__item" v-for="(skillPercents, skillName) in skill.skills">
+            <skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+          </li>
+        </ul>
+      </div>
+    </script>
+    <script type="text/x-template" id="skill">
+      <div class="skill">
+        <svg class="b-skill-svg" viewBox="0 0 122 122" width="122" height="122" preserveAspectRatio="none">
+          <circle class="b-skill-svg__circle-base" cx="50" cy="50" r="40"></circle>
+          <circle class="b-skill-svg__circle-progress" cx="50" cy="50" r="40" ref="color-circle"></circle>
+        </svg>
+        <div class="skill__title">{{ skillName }} </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider">
+      <div class="slider">
+        <info :work="currentWork"></info>
+        <display :work="currentWork"></display>
+        <buttons :works="works" :currentIndex="currentIndex" @slide="handleSlide"></buttons>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-info">
+      <div class="slider__info-container">
+        <div class="slider__info">
+          <div class="slider__info-title">
+            <div class="subtitle">{{work.title}}</div>
+          </div><img src="/default.jpg" srcset="/large.png 1000w, med.png 768px, min.png 480w" sizes="(max-width: 768px) 300px, (max-width: 1000) 800px" alt="">
+          <transition-group appear :css="false" @before-enter="callback('before-enter')" @after-enter="callback('after-enter')" @enter="enterHandler">
+            <div class="slider__info-skills" :key="work.skills">{{work.skills}}</div>
+          </transition-group>
+          <div class="slider__info-button"><a class="button" :href="work.link" target="_blank">Посмотреть сайт</a></div>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-template" id="slider-display">
+      <div class="slider__display"><img class="slider__big-pic" :src="work.photo"></div>
+    </script>
+    <script type="text/x-template" id="slider-buttons">
+      <div class="slider__buttons">
+        <div class="slider__button" @click="slide('prev')">
+          <transition-group class="slider__button-img-container" name="slide-down" tag="div">
+            <div class="slider__button-img-wrap" :key="getReqImage('prev').photo"><img class="slider__button-pic" :src="getReqImage('prev').photo" alt=""></div>
+          </transition-group>
+        </div>
+        <div class="slider__button slider__button--next" @click="slide('next')">
+          <transition-group class="slider__button-img-container" name="slide-up" tag="div">
+            <div class="slider__button-img-wrap" :key="getReqImage('next').photo"><img class="slider__button-pic" :src="getReqImage('next').photo" alt=""></div>
+          </transition-group>
+        </div>
+      </div>
+    </script>
+    <script src="./assets/scripts/bootloader.bundle.js"></script>
+    <script src="./assets/scripts/vendor.bundle.js"></script>
   </body>
 </html>
