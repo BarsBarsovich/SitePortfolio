@@ -6,6 +6,10 @@
 
 .socials-margin {
     margin-bottom: 60px;
+    @include widephone() {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .socials__item {

@@ -1,11 +1,13 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Обо мне';
+  - var title = 'Обо мне'; 
+
+block scripts
+  script(src='./assets/scripts/about.bundle.js')  
 
 
 block content
-  .maincontent
     include ../blocks/hero.pug
 
     section.about
@@ -42,21 +44,7 @@ block content
               ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
             ]
 
-          //- #skills-container
-          //-   #skills-list
-
-                  //- .skills-row__title #{skillsrow[0]}
-                  //- ul.skills-row__list
-                  //-   each skill in skillsrow[1]
-                  //-     li.skills-row__item
-                  //-       .skill(data-percents="70")
-                  //-         svg(viewBox="0 0 122 122" width="122" height="122").b-skill-svg
-                  //-           circle(class="b-skill-svg__circle-base" r="50" cx="50%" cy="50%")
-                  //-           circle(class="b-skill-svg__circle-progress" r="50" cx="50%" cy="50%" stroke-dasharray=`${skill[1]} 360` transform="rotate(-90 61 61)")
-                  //-         .skill__title #{skill[0]}
-
-
-
+          #skills-container
     section.map
       .google-map
       .map__data

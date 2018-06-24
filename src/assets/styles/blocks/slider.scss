@@ -3,8 +3,9 @@
     height: 100vh;
     grid-template: "info display" 70% "info buttons" 30% / 1fr 1fr;
     @include tablets() {
-        grid-template: "display" 45% "info" 270px "buttons" 315px /1fr;
+        grid-template: "display" 45% "info" 45% "buttons" 20% /1fr;
     }
+    width: 100%;
 }
 
 .slider__info-container {
@@ -31,10 +32,19 @@
 
 .slider__button {
     width: 50%;
+    position: relative;
 }
 
 .slider__big-pic {
     display: block;
     min-width: 90%;
     max-height: 90%;
+}
+
+.slider__button--logo {
+    width: 100%;
+}
+
+.slider__info--button {
+    position: relative;
 }

@@ -20,7 +20,7 @@ const $gp = require("gulp-load-plugins")();
 const paths = {
     root: './build',
     templates: {
-        pages: './src/views/pages/*.pug',
+        pages: './src/views/pages/**/*.pug',
         styles: './src/assets/styles/**/*.scss',
         dest: './build'
     },
@@ -45,19 +45,21 @@ const paths = {
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, fonts),
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts),
     gulp.parallel(watch, server)
 ));
 
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, fonts)
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts)
 ));
 
 function watch() {
     gulp.watch(paths.styles.styles, styles);
     gulp.watch(paths.templates.pages, templates);
+    gulp.watch(paths.js.main, templates);
+
 }
 
 //compile pug
