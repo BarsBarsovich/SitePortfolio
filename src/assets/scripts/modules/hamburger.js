@@ -1,11 +1,15 @@
 import Vue from "vue";
 
 new Vue({
-    el: "#hamburger",
-    methods: {
-        changeCaption: function() {
-            console.log("yoba");
-
-        }
+  el: "#hamburger",
+  data: {
+    active: false
+  },
+  methods: {
+    changeCaption: function() {
+      console.log("initial acitive" + this.active);
+      this.active = !this.active;
+      console.log("change active" + this.active);
     }
+  }
 });

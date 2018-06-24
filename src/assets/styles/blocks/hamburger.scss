@@ -22,6 +22,9 @@
     left: 50%;
     width: 40px;
     height: 5px;
+    &--active {
+        height: 0;
+    }
     &:before {
         content: '';
         transform: translateY(-10px);
@@ -38,4 +41,12 @@
         display: block;
         background-color: #fff;
     }
+}
+
+.hamburger__span--active:before {
+    transform: rotate(45deg);
+}
+
+.hamburger__span--active:after {
+    transform: translateY(-5px) rotate(-45deg);
 }

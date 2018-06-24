@@ -1,2 +1,2 @@
 import "./modules/skills";
-import "./modules/hamburger"
+import "./modules/hamburger";

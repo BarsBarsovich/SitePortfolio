@@ -1,2 +1,3 @@
 button#hamburger
-    span(v-on:click="changeCaption").hamburger__span
+    span(v-on:click="changeCaption"
+    v-bind:class="[active ? 'hamburger__span--active' : 'hamburger__span']").hamburger__span
