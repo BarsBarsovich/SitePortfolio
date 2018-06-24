@@ -1,0 +1,1 @@
+webpackJsonp([2],{1:function(t,e,i){"use strict";var a,c=i(0);new((a=c)&&a.__esModule?a:{default:a}).default({el:"#hamburger",data:{active:!1},methods:{changeCaption:function(){console.log("initial acitive"+this.active),this.active=!this.active,console.log("change active"+this.active)}}})},10:function(t,e,i){"use strict";i(1)}},[10]);
