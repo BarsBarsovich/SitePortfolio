@@ -2,7 +2,7 @@ extends ../main.layout.pug
 
 block content
     
-        #card
+        #card.card
             header.header
                 .header__container
                     button.header__btn Авторизоваться
@@ -44,9 +44,9 @@ block content
                             input(type="checkbox" id="notRobot" class="card__back-checkbox")
                             label(for="notRobot" class="card__back-label_checkbox") Я человек
                         //- .radio
-                        .radio__container
+                        .radio
                             .card__back-title Вы точно не робот
-                            .card__back__label-container
+                            .card__back-label-container
                                 label.radio__label.visually-hidden Да
                                     input(type="radio" class="radio" name="radio-test")
                                     span.radio-custom
@@ -67,8 +67,8 @@ block content
             .footer.footer__about
                 .footer__row
                     .footer__content.footer__content--nocolor
-                        span.footer__content--author © Борис Дрябин |
-                        span.footer__content--desc Создано с любовью в LoftSchool | 2018
+                        span.footer__content-author © Борис Дрябин |
+                        span.footer__content-desc Создано с любовью в LoftSchool | 2018
 
         script#vertexShader(type='x-shader/x-vertex').
             varying vec2 v_position;

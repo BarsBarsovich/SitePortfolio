@@ -72,11 +72,11 @@
 }
 
 .blog__list,
-.blog__right__list {
+.blog__right-list {
     margin-top: 50px;
 }
 
-.blog__right__list {
+.blog__right-list {
     @include tablets() {
         width: 100%;
         margin-left: 30px;
