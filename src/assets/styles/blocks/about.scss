@@ -1,16 +1,25 @@
 .about {
     display: flex;
     position: relative;
+    @include tablets() {
+        flex-direction: column;
+    }
 }
 
 .about__left {
     width: 50%;
     background: #ebefe2;
+    @include tablets() {
+        width: 100%;
+    }
 }
 
 .about__right {
     width: 50%;
     background: #f4f5f0;
+    @include tablets() {
+        width: 100%;
+    }
 }
 
 .block-title {
@@ -41,9 +50,9 @@
     }
 }
 
-.block-title-margin{
+.block-title-margin {
     margin-top: 70px;
-    padding-bottom:10px; 
+    padding-bottom: 10px;
 }
 
 .block-subtitle {
@@ -78,8 +87,8 @@
     margin-top: 8px;
 }
 
-.block-subtitle-auth{
-    color:#fff;
+.block-subtitle-auth {
+    color: #fff;
     margin-top: 34px;
 }
 

@@ -1,3 +1,9 @@
+.menu {
+    @include widephone() {
+        border-bottom: 1px solid;
+    }
+}
+
 .menu__list {
     display: flex;
     margin-top: 20px;
@@ -8,6 +14,13 @@
     margin-right: 25px;
     &:last-child() {
         margin-right: 0;
+        @include tablets() {
+            width: 100%;
+            padding-right: 20px;
+        }
+    }
+    @include tablets() {
+        margin-right: 13px;
     }
 }
 

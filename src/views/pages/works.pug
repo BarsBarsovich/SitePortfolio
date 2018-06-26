@@ -4,36 +4,57 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    .maincontent
         include ../blocks/hero.pug
 
         section.works
             .triangle
                 .triangle__left.triangle__left_transparent
+            .triangle
+                .triangle__right.triangle__right_transparent                
             .block-title мои работы
-            .works__container
-                .works__left
-                    .works__left-container
-                        .block-subtitle Сайт школы онлайн <br/> Образования
-                        .works__left-title HTML , CSS, JAVASCRIPT
-                        .works__left__btn
-                            img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
-                            button.works__left__btn-button Посмотреть сайт
+            
+            .slider
+                .slider__info-container
+                    .slider__info
+                        .slider__info-title
+                            .block-subtitle Сайт школы онлайн <br/> Образования
+                    .slider__info-skills.works__left-title Html, css, javascript
+                    .slider__info--button
+                        img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
+                        button.works__left__btn-button Посмотреть сайт
+                .slider__display
+                    img(src="./assets/images/works.png", alt="").slider__big-pic
+                .slider__buttons
+                    .slider__button                     
+                        img(src="./assets/images/page-down.png", alt="" class="slider__button--logo")
+                        +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
+                    .slider__button.slider__button-next
+                        .slider__button-img-wrap
+                            img(src="./assets/images/page-up.png",class="slider__button--logo" alt="")
+                            +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
+ 
+            //- .works__container
+            //-     .works__left
+            //-         .works__left-container
+            //-             .block-subtitle 
+            //-             .works__left-title HTML , CSS, JAVASCRIPT
+            //-             .works__left__btn
+            //-                 img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
+            //-                 button.works__left__btn-button Посмотреть сайт
 
-                .works__right 
-                    .triangle
-                        .triangle__right.triangle__right_transparent
-                    .works__right-container
-                        .slider
-                            .slider__img-container
-                                img(src="./assets/images/works.png", alt="").slider__logo                                
-                            .slider__arrows
-                                .slider__left
-                                    img(src="./assets/images/page-down.png", class="slider__left-logo" alt="")
-                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
-                                .slider__right
-                                    img(src="./assets/images/page-up.png",class="slider__right-logo" alt="")
-                                    +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
+            //-     .works__right 
+
+            //-         .works__right-container
+            //-             .slider
+            //-                 .slider__img-container
+            //-                     img(src="./assets/images/works.png", alt="").slider__logo                                
+            //-                 .slider__arrows
+            //-                     .slider__left
+            //-                         img(src="./assets/images/page-down.png", class="slider__left-logo" alt="")
+            //-                         +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
+            //-                     .slider__right
+            //-                         img(src="./assets/images/page-up.png",class="slider__right-logo" alt="")
+            //-                         +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
                         //- .block__title Сайт школы онлайн Образования 
 
         section.talks

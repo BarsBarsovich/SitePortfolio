@@ -6,14 +6,21 @@ const gulp = require('gulp'),
     del = require('del'),
     browserSync = require('browser-sync').create(),
     gulpCopy = require('gulp-copy'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    gcmq = require('gulp-group-css-media-queries'),
+    webpack = require("webpack"),
+    $webpack = require("webpack-stream");
+
+
+const reload = browserSync.reload;
+
 
 const $gp = require("gulp-load-plugins")();
 
 const paths = {
     root: './build',
     templates: {
-        pages: './src/views/pages/*.pug',
+        pages: './src/views/pages/**/*.pug',
         styles: './src/assets/styles/**/*.scss',
         dest: './build'
     },
@@ -26,6 +33,10 @@ const paths = {
         main: './src/assets/images/**',
         dest: './build/assets/images'
     },
+    js: {
+        main: './src/assets/scripts/*.js',
+        dest: './build/assets/scripts'
+    },
     fonts: {
         main: './src/assets/fonts/*',
         dest: './build/assets/fonts'
@@ -34,19 +45,21 @@ const paths = {
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, fonts),
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts),
     gulp.parallel(watch, server)
 ));
 
 
 gulp.task('build', gulp.series(
-    clean, 
-    gulp.parallel(styles, templates, images, sprite, fonts)
+    clean,
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts)
 ));
 
 function watch() {
     gulp.watch(paths.styles.styles, styles);
     gulp.watch(paths.templates.pages, templates);
+    gulp.watch(paths.js.main, templates);
+
 }
 
 //compile pug
@@ -69,6 +82,7 @@ function styles() {
         .pipe(sourcemaps.init())
         .pipe(postcss(require("./postcss.config")))
         .pipe(sourcemaps.write())
+        .pipe(gcmq())
         .pipe(rename("main.min.css"))
         .pipe(gulp.dest(paths.styles.dest));
 }
@@ -134,6 +148,16 @@ function deploy() {
         .pipe(ghPages());
 }
 
+function scripts() {
+    return gulp
+        .src(paths.js.main)
+        .pipe($gp.plumber())
+        .pipe($webpack(require("./webpack.mpa.config"), webpack))
+        .pipe(gulp.dest(paths.js.dest))
+        .pipe(reload({ stream: true }));
+}
+
+
 
 exports.templates = templates;
 exports.styles = styles;
@@ -142,3 +166,4 @@ exports.images = images;
 exports.sprite = sprite;
 exports.fonts = fonts
 exports.deploy = deploy;
+exports.scripts = scripts;

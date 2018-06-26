@@ -1,3 +1,7 @@
+.card {
+    height: 100%;
+}
+
 .card__wrapper {
     display: flex;
     justify-content: center;
@@ -26,6 +30,6 @@
     justify-content: center;
 }
 
-.btn__list-padding{
+.btn__list-padding {
     padding-top: 20px;
 }

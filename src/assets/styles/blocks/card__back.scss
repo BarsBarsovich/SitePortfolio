@@ -1,6 +1,7 @@
-.card__back{
+.card__back {
     display: none;
 }
+
 .card__back-input {
     width: 340px;
     height: 45px;
@@ -34,8 +35,6 @@
     position: absolute;
     top: 402px;
 }
-
-
 
 .card__back-label {
     color: #ffffff;
@@ -90,7 +89,7 @@
     margin-top: 25px;
 }
 
-.card__back-title{
+.card__back-title {
     margin-left: 32%;
 }
 
@@ -100,7 +99,7 @@
     font-size: 16px;
 }
 
-.card__back_radio_container{
+.card__back_radio_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,18 +107,18 @@
     margin-top: 16px;
 }
 
-.card__back-radio-control{
+.card__back-radio-control {
     margin-right: 10px;
 }
 
-.label{
+.label {
     color: #ffffff;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
 }
 
-.card__back__label-container{
+.card__back-label-container {
     margin-top: 12px;
     display: flex;
     justify-content: center;

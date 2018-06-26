@@ -1,6 +1,13 @@
 .skills-list {
     margin-left: 37px;
-    margin-top: -74px;
+    margin-top: 74px;
+    @include tablets() {
+        margin-bottom: 100px;
+    }
+}
+
+.skills-list__item {
+    padding-right: 30px;
 }
 
 .skills-row__list {
@@ -14,6 +21,9 @@
     font-weight: 500;
     position: relative;
     margin-top: 76px;
+    @include tablets() {
+        text-align: center;
+    }
 }
 
 .skill__title {
@@ -21,11 +31,13 @@
     font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
-    line-height: 29.39px;
+    line-height: 1.4;
     text-transform: uppercase;
-    //position: relative;
-    margin-top: -78px;
-    margin-left: 48px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .skills-row__item {
@@ -48,4 +60,15 @@
 .skill__figure {
     height: 100px;
     width: 100px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    padding-top: 20px;
+    position: relative;
 }

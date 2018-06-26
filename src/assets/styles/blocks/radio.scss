@@ -24,8 +24,10 @@
     right: 2px;
     bottom: 2px;
     left: 2px;
-    background:#6c9c5a;;
-    border: 1x solid #6c9c5a;;
+    background: #6c9c5a;
+    ;
+    border: 1x solid #6c9c5a;
+    ;
     border-radius: 2px;
 }
 
@@ -34,15 +36,11 @@
     border-radius: 50%;
 }
 
-.radio__container {
+.radio {
     padding-top: 12px;
     margin-right: 2px;
 }
 
-// .form__second-label {
-//     margin-left: 27px;
-// }
-
-.radio__label{
+.radio__label {
     margin-right: 50px;
-}  
+}

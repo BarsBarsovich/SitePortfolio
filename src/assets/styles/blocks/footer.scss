@@ -14,6 +14,12 @@
 .footer__row {
     display: flex;
     width: 100%;
+    @include tablets() {
+        flex-wrap: wrap;
+    }
+    @include widephone() {
+        margin-top: -19px;
+    }
 }
 
 .footer__col {
@@ -21,8 +27,22 @@
     line-height: 20px;
     background: #545a5c;
     width: 35%;
+    @include tablets() {
+        width: 50%;
+    }
+    @include widephone() {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     &:last-child {
         border-right: 0px;
+        @include tablets() {
+            width: 100%;
+            padding-right: 25px;
+            padding-bottom: 27px;
+            padding-right: 40px;
+        }
     }
 }
 
@@ -30,6 +50,12 @@
     text-align: left;
     padding-left: 50px;
     padding-top: 20px;
+    @include tablets() {
+        padding-left: 20px;
+    }
+    @include widephone() {
+        width: 67%;
+    }
 }
 
 .footer__desc {
@@ -39,11 +65,18 @@
     font-weight: 300;
     text-align: left;
     padding: 20px 20px;
+    @include widephone() {
+        width: 65%;
+        border-bottom: 1px solid;
+    }
 }
 
 .footer__content {
     display: flex;
     width: 100%;
+    @include widephone() {
+        flex-direction: column;
+    }
 }
 
 .footer__content {
@@ -55,6 +88,9 @@
     font-family: Roboto;
     font-size: 16px;
     font-weight: 300;
+    &--nocolor {
+        background: transparent;
+    }
 }
 
 .footer__text-citate {
