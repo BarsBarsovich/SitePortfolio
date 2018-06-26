@@ -6,6 +6,10 @@
     }
 }
 
+.skills-list__item {
+    padding-right: 30px;
+}
+
 .skills-row__list {
     display: flex;
 }
@@ -27,11 +31,13 @@
     font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
-    line-height: 29.39px;
+    line-height: 1.4;
     text-transform: uppercase;
-    //position: relative;
-    margin-top: -78px;
-    margin-left: 48px;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
 
 .skills-row__item {
@@ -58,5 +64,11 @@
 
 .skills {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
     padding-top: 20px;
+    position: relative;
 }

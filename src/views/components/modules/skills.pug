@@ -18,28 +18,6 @@ script(type="text/x-template")#skills-row
 script(type="text/x-template")#skill
   .skill
     svg(viewBox="0 0 122 122" width="122" height="122" preserveAspectRatio="none").b-skill-svg
-      circle(cx="50" cy="50" r="40").b-skill-svg__circle-base
-      circle(cx="50" cy="50" r="40" ref="color-circle").b-skill-svg__circle-progress
+      circle(cx="50%" cy="50%" r="50").b-skill-svg__circle-base
+      circle(cx="50%" cy="50%" r="50" ref="color-circle").b-skill-svg__circle-progress
     .skill__title {{ skillName }} 
-
-
-
-
-
-          //-   var skills = [
-          //-     ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript <br/> jQuery', 70]]],
-          //-     ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js <br/> npm', 70],['MongoDB', 70]]],
-          //-     ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
-          //-   ]
-          //- ul.skills-list
-          //-   each skillsrow in skills
-          //-     li.skills-list__item.skills-row
-          //-       .skills-row__title #{skillsrow[0]}
-          //-       ul.skills-row__list
-          //-         each skill in skillsrow[1]
-          //-           li.skills-row__item
-          //-             .skill(data-percents="70")
-          //-               svg(viewBox="0 0 122 122" width="122" height="122").b-skill-svg
-          //-                 circle(class="b-skill-svg__circle-base" r="50" cx="50%" cy="50%")
-          //-                 circle(class="b-skill-svg__circle-progress" r="50" cx="50%" cy="50%" stroke-dasharray=`${skill[1]} 360` transform="rotate(-90 61 61)")
-          //-               .skill__title #{skill[0]}
