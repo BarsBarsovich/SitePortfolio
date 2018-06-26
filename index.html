@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -6,12 +6,12 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | </title>
     <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
-<script src="./js/three.min.js"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <div id="card">
+        <div class="card" id="card">
           <header class="header">
             <div class="header__container">
               <button class="header__btn">Авторизоваться</button>
@@ -70,9 +70,9 @@
                   <input class="card__back-checkbox" type="checkbox" id="notRobot">
                   <label class="card__back-label_checkbox" for="notRobot">Я человек</label>
                 </div>
-                <div class="radio__container">
+                <div class="radio">
                   <div class="card__back-title">Вы точно не робот</div>
-                  <div class="card__back__label-container">
+                  <div class="card__back-label-container">
                     <label class="radio__label visually-hidden">Да
                       <input class="radio" type="radio" name="radio-test"><span class="radio-custom"></span><span class="label">Да</span>
                     </label>
@@ -92,7 +92,7 @@
           </div>
           <div class="footer footer__about">
             <div class="footer__row">
-              <div class="footer__content footer__content--nocolor"><span class="footer__content--author">© Борис Дрябин |</span><span class="footer__content--desc">Создано с любовью в LoftSchool | 2018</span></div>
+              <div class="footer__content footer__content--nocolor"><span class="footer__content-author">© Борис Дрябин |</span><span class="footer__content-desc">Создано с любовью в LoftSchool | 2018</span></div>
             </div>
           </div>
         </div>
@@ -265,8 +265,8 @@
     <script type="text/x-template" id="skill">
       <div class="skill">
         <svg class="b-skill-svg" viewBox="0 0 122 122" width="122" height="122" preserveAspectRatio="none">
-          <circle class="b-skill-svg__circle-base" cx="50" cy="50" r="40"></circle>
-          <circle class="b-skill-svg__circle-progress" cx="50" cy="50" r="40" ref="color-circle"></circle>
+          <circle class="b-skill-svg__circle-base" cx="50%" cy="50%" r="50"></circle>
+          <circle class="b-skill-svg__circle-progress" cx="50%" cy="50%" r="50" ref="color-circle"></circle>
         </svg>
         <div class="skill__title">{{ skillName }} </div>
       </div>

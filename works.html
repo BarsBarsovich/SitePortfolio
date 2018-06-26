@@ -28,7 +28,7 @@
                   </svg></a></li>
             </ul>
             <div class="hero__menu">
-              <button id="hamburger"><span class="hamburger__span" v-on:click="changeCaption" v-bind:class="[active ? 'hamburger__span--active' : 'hamburger__span']"></span></button>
+              <button v-on:click="changeCaption" id="hamburger"><span v-bind:class="[active ? 'hamburger__span hamburger__span--active' : 'hamburger__span']"></span></button>
             </div>
             <div class="hero__title">
               <div class="section-title">
@@ -174,7 +174,7 @@
               </div>
             </div>
             <div class="footer__row">
-              <div class="footer__content"><span class="footer__content--author">© Борис Дрябин |</span><span class="footer__content--desc">Создано с любовью в LoftSchool | 2018</span></div>
+              <div class="footer__content"><span class="footer__content-author">© Борис Дрябин |</span><span class="footer__content-desc">Создано с любовью в LoftSchool | 2018</span></div>
             </div>
           </footer>
         </section>
@@ -200,8 +200,8 @@
     <script type="text/x-template" id="skill">
       <div class="skill">
         <svg class="b-skill-svg" viewBox="0 0 122 122" width="122" height="122" preserveAspectRatio="none">
-          <circle class="b-skill-svg__circle-base" cx="50" cy="50" r="40"></circle>
-          <circle class="b-skill-svg__circle-progress" cx="50" cy="50" r="40" ref="color-circle"></circle>
+          <circle class="b-skill-svg__circle-base" cx="50%" cy="50%" r="50"></circle>
+          <circle class="b-skill-svg__circle-progress" cx="50%" cy="50%" r="50" ref="color-circle"></circle>
         </svg>
         <div class="skill__title">{{ skillName }} </div>
       </div>
