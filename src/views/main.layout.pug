@@ -14,11 +14,13 @@ html(lang="ru")
     <script src="http://threejs.org/build/three.min.js"></script>
   body
     .wrapper
+      include ./blocks/preloader.pug
       .maincontent
         block content
 
       //- include ./common/footer.pug
     include ./components/entry.pug
+
 
 
     script(src='./assets/scripts/bootloader.bundle.js')

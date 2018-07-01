@@ -10,7 +10,7 @@ block scripts
 block content
     include ../blocks/hero.pug
 
-    section.about
+    section.about#about
       .about__left
         .triangle
           .triangle__left
@@ -37,13 +37,6 @@ block content
         .about__right-description.text-content.text-content-right
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .about__right-content
-          -
-            var skills = [
-              ['Frontend', [['Html5', 30], ['css3', 50], ['JavaScript <br/> jQuery', 70]]],
-              ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js <br/> npm', 70],['MongoDB', 70]]],
-              ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
-            ]
-
           #skills-container
     section.map
       .google-map
@@ -56,7 +49,7 @@ block content
               -
                 var contacts = [
                   ['skype', 'mr_ghost6'],
-                  ['phone', '+79161462155'],
+                  ['phone', '911'],
                   ['map_marker', 'skype_kdn'],
                   ['envelope2', '1462155@mail.ru']
                 ]

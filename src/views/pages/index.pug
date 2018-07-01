@@ -1,11 +1,14 @@
 extends ../main.layout.pug
 
+block scripts
+    script(src='./assets/scripts/index.bundle.js')
+
 block content
     
         #card.card
             header.header
                 .header__container
-                    button.header__btn Авторизоваться
+                    button(@:click="formAnimation").header__btn#loginButton Авторизоваться
             .card__wrapper
                 .card__front
                     .card__container
@@ -69,6 +72,7 @@ block content
                     .footer__content.footer__content--nocolor
                         span.footer__content-author © Борис Дрябин |
                         span.footer__content-desc Создано с любовью в LoftSchool | 2018
+            
 
         script#vertexShader(type='x-shader/x-vertex').
             varying vec2 v_position;

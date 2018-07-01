@@ -58,7 +58,7 @@ gulp.task('build', gulp.series(
 function watch() {
     gulp.watch(paths.styles.styles, styles);
     gulp.watch(paths.templates.pages, templates);
-    gulp.watch(paths.js.main, templates);
+    gulp.watch(paths.js.main, scripts);
 
 }
 
