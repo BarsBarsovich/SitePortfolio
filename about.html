@@ -5,11 +5,17 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | Обо мне</title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./assets/js/TweenLite.min.js"></script>
-<script src="./assets/js/three.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
       <div class="maincontent">
         <section class="hero">
           <div class="hero__links">
@@ -46,7 +52,7 @@
               </svg></a>
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__left">
             <div class="triangle">
               <div class="triangle__left"></div>
@@ -109,7 +115,7 @@
                         <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
                       </svg>
                     </div>
-                    <div class="contacts-row contacts__info">+79161462155</div>
+                    <div class="contacts-row contacts__info">911</div>
                   </li>
                   <li class="contacts__item contacts-row">
                     <div class="contacts-row contacts__icon">
@@ -213,12 +219,14 @@
       <div class="slider__info-container">
         <div class="slider__info">
           <div class="slider__info-title">
-            <div class="subtitle">{{work.title}}</div>
-          </div><img src="/default.jpg" srcset="/large.png 1000w, med.png 768px, min.png 480w" sizes="(max-width: 768px) 300px, (max-width: 1000) 800px" alt="">
+            <div class="block-subtitle">{{work.title}}</div>
+          </div><img src="/default.jpg" alt="">
           <transition-group appear :css="false" @before-enter="callback('before-enter')" @after-enter="callback('after-enter')" @enter="enterHandler">
-            <div class="slider__info-skills" :key="work.skills">{{work.skills}}</div>
+            <div class="slider__info-skills works__left-title" :key="work.skills">{{work.skills}}</div>
           </transition-group>
-          <div class="slider__info-button"><a class="button" :href="work.link" target="_blank">Посмотреть сайт</a></div>
+          <div class="slider__info--button"><img class="works__left__btn-icon" src="./assets/images/link.png" alt="">
+            <button class="works__left__btn-button">Посмотреть сайт</button>
+          </div>
         </div>
       </div>
     </script>

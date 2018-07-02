@@ -5,11 +5,17 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | Мои работы</title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./assets/js/TweenLite.min.js"></script>
-<script src="./assets/js/three.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="preloader__spinner">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percents">0%</div>
+        </div>
+      </div>
       <div class="maincontent">
         <section class="hero">
           <div class="hero__links">
@@ -46,41 +52,16 @@
               </svg></a>
           </div>
         </section>
-        <section class="works">
+        <section class="works" id="works">
           <div class="triangle">
             <div class="triangle__left triangle__left_transparent"></div>
           </div>
           <div class="triangle">
             <div class="triangle__right triangle__right_transparent">               </div>
           </div>
-          <div class="block-title">мои работы</div>
-          <div class="slider">
-            <div class="slider__info-container">
-              <div class="slider__info">
-                <div class="slider__info-title">
-                  <div class="block-subtitle">Сайт школы онлайн <br/> Образования</div>
-                </div>
-              </div>
-              <div class="slider__info-skills works__left-title">Html, css, javascript</div>
-              <div class="slider__info--button"><img class="works__left__btn-icon" src="./assets/images/link.png" alt="">
-                <button class="works__left__btn-button">Посмотреть сайт</button>
-              </div>
-            </div>
-            <div class="slider__display"><img class="slider__big-pic" src="./assets/images/works.png" alt=""></div>
-            <div class="slider__buttons">
-              <div class="slider__button">                    <img class="slider__button--logo" src="./assets/images/page-down.png" alt="">
-                <svg class="arrow__slider arrow__slider-left">
-                  <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-                </svg>
-              </div>
-              <div class="slider__button slider__button-next">
-                <div class="slider__button-img-wrap"><img class="slider__button--logo" src="./assets/images/page-up.png" alt="">
-                  <svg class="arrow__slider arrow__slider-right">
-                    <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
+          <div class="block-title block-title-margin">мои работы</div>
+          <div class="slider-container">
+            <div id="slider-component"></div>
           </div>
         </section>
         <section class="talks">
@@ -110,19 +91,23 @@
             </div>
             <div class="talks__form-container">
               <div class="talks__form">
-                <form class="talks__form__form">                     
+                <form class="talks__form__form" id="form__order" v-on:submit="checkForm" method="post">
                   <div class="talks__form-container_inner">                         
                     <div class="block-subtitle">Связаться со мной</div>
                     <label class="talks__form-label" for="name"></label>
-                    <input class="talks__form-input" placeholder="Имя" id="name" name="name">
+                    <input class="talks__form-input" placeholder="Имя" id="name" name="name" v-model="name">
                     <label class="talks__form-label" for="email"></label>
-                    <input class="talks__form-input" placeholder="Email" id="email" name="email">
+                    <input class="talks__form-input" placeholder="Email" id="email" name="email" v-model="email">
                     <label class="talks__form-label" for="text"></label>
-                    <textarea class="talks__form__area" id="text" name="text" placeholder="Ваше сообщение"></textarea>
+                    <textarea class="talks__form__area" id="text" name="text" placeholder="Ваше сообщение" v-model="text"></textarea>
                     <div class="btn__container talks__form-container_inner">
                       <ul class="btn__list btn__list-full-width">
-                        <li class="btn__item btn__item-width"><a class="btn__nav-link" href="#">Отправить</a></li>
-                        <li class="btn__item btn__item-width"><a class="btn__nav-link" href="#">Очистить</a></li>
+                        <li class="btn__item btn__item-width">
+                          <button class="btn__nav-link btn__nav-link-transparent" type="submit" v-on:click="submitForm">Отправить</button>
+                        </li>
+                        <li class="btn__item btn__item-width">
+                          <button class="btn__nav-link btn__nav-link-transparent" type="reset" v-on:click="resetForm">Очистить</button>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -217,12 +202,14 @@
       <div class="slider__info-container">
         <div class="slider__info">
           <div class="slider__info-title">
-            <div class="subtitle">{{work.title}}</div>
-          </div><img src="/default.jpg" srcset="/large.png 1000w, med.png 768px, min.png 480w" sizes="(max-width: 768px) 300px, (max-width: 1000) 800px" alt="">
+            <div class="block-subtitle">{{work.title}}</div>
+          </div><img src="/default.jpg" alt="">
           <transition-group appear :css="false" @before-enter="callback('before-enter')" @after-enter="callback('after-enter')" @enter="enterHandler">
-            <div class="slider__info-skills" :key="work.skills">{{work.skills}}</div>
+            <div class="slider__info-skills works__left-title" :key="work.skills">{{work.skills}}</div>
           </transition-group>
-          <div class="slider__info-button"><a class="button" :href="work.link" target="_blank">Посмотреть сайт</a></div>
+          <div class="slider__info--button"><img class="works__left__btn-icon" src="./assets/images/link.png" alt="">
+            <button class="works__left__btn-button">Посмотреть сайт</button>
+          </div>
         </div>
       </div>
     </script>
@@ -245,5 +232,6 @@
     </script>
     <script src="./assets/scripts/bootloader.bundle.js"></script>
     <script src="./assets/scripts/vendor.bundle.js"></script>
+    <script src="./assets/scripts/works.bundle.js"></script>
   </body>
 </html>
