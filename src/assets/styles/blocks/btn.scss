@@ -3,9 +3,8 @@
     height: 1%;
 }
 
-.btn__container-margin{
+.btn__container-margin {
     margin-top: -81px;
-    
 }
 
 .btn__list {
@@ -13,7 +12,7 @@
     justify-content: space-between;
 }
 
-.btn__list-full-width{
+.btn__list-full-width {
     width: 112%;
 }
 
@@ -37,10 +36,9 @@
     border-right: 0px;
 }
 
-.btn__item-width{
+.btn__item-width {
     width: 50%;
 }
-
 
 .btn__nav-link {
     color: #ffffff;
@@ -51,4 +49,7 @@
     height: 48px;
     display: flex;
     align-items: center;
+    &-transparent {
+        background: transparent;
+    }
 }

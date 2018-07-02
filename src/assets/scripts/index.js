@@ -8,9 +8,6 @@ new Vue({
     preloader();
   },
   methods: {
-    formAnimation: function() {
-      cosole.log("animation");
-      // $('')
-    }
+    formAnimation: function() {}
   }
 });
