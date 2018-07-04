@@ -62,8 +62,8 @@ block content
                                             
                         .btn__container
                             ul.btn__list.btn__list-padding
-                                li.btn__item.btn__item-width
-                                    a(href="/" class="btn__nav-link") На главную
+                                li.btn__item.btn__item-width#homeButton
+                                    a(href="/" class="btn__nav-link" v-on:click="returnToHome") На главную
                                 li.btn__item.btn__item-width
                                     a(href="about.html" class="btn__nav-link") Войти
                     

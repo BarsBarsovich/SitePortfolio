@@ -3,7 +3,7 @@ import Vue from "vue";
 import preloader from "./modules/preloader";
 
 new Vue({
-  el: "#loginButton",
+  el: "#card",
   data: {
     isFront: true
   },
@@ -14,15 +14,13 @@ new Vue({
     formAnimation: function() {
       $(".card__front").toggleClass("card__front--active");
       $(".card__back").toggleClass("card__back--active");
-      // if (this.isFront) {
-      //   $(".card__front").toggleClass('.card__front--active');
-      //   $(".card__back").show();
-      //   this.isFront = false;
-      // } else {
-      //   $(".card__front").show();
-      //   $(".card__back").hide();
-      //   this.isFront = true;
-      // }
+      $("#loginButton").hide();
+    },
+    returnToHome: function(e) {
+      e.preventDefault();
+      $(".card__front").toggleClass("card__front--active");
+      $(".card__back").toggleClass("card__back--active");
+      $("#loginButton").show();
     }
   }
 });
