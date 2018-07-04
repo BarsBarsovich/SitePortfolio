@@ -1,5 +1,6 @@
 import "./modules/hamburger";
 import preloader from "./modules/preloader";
+import "./modules/slider";
 import Vue from "vue";
 import $ from "jquery";
 
