@@ -7,9 +7,9 @@ import $ from "jquery";
 new Vue({
   el: "#form__order",
   data: {
-    name: null,
-    email: null,
-    text: null,
+    name: "",
+    email: "",
+    text: "",
     unsucsess: false,
     errorMessage: ""
   },
@@ -20,38 +20,31 @@ new Vue({
     checkForm: function(e) {
       console.log("checkForm");
       var errorMessage = "";
+      console.log("name" + this.name);
 
-      if (this.name == null) {
-        this.errorMessage += "Введите имя\n";
-        this.unsucsess = true;
-      }
+      let nameRequired = this.name == "" ? true : false;
+      let emailRequired = this.email == "" ? true : false;
+      let textRequired = this.text == "" ? true : false;
 
-      if (this.email == null) {
-        this.unsucsess = true;
-        this.errorMessage += "Введите email\n";
-      }
+      document.getElementById("name").required = nameRequired;
+      document.getElementById("email").required = emailRequired;
+      document.getElementById("text").required = textRequired;
 
-      if (this.text == null) {
-        this.unsucsess = true;
-        this.errorMessage += "Введите сообщение\n";
-      }
+      this.unsucsess = nameRequired && emailRequired && textRequired;
 
       if (this.unsucsess) {
-        alert(this.errorMessage);
         e.preventDefault();
       } else {
-        alert("Отправка");
-        e.preventDefault();
-
-        // var axios = require('axios');
-        // axios.post('send.php', { data: this.data })
-        //   .then(function (response) {
-        //       console.log(response);
-        //   })
-        //   .catch(function (error) {
-        //       // Wu oh! Something went wrong
-        //       console.log(error.message);
-        //   });
+        var axios = require("axios");
+        axios
+          .post("send.php", { data: this.data })
+          .then(function(response) {
+            console.log(response);
+          })
+          .catch(function(error) {
+            // Wu oh! Something went wrong
+            console.log(error.message);
+          });
       }
     },
     submitForm: function() {

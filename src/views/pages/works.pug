@@ -42,11 +42,11 @@ block content
                             .talks__form-container_inner                          
                                 .block-subtitle Связаться со мной
                                 label(for="name" class="talks__form-label")
-                                input(placeholder="Имя" id="name" name="name" v-model="name").talks__form-input 
+                                input(placeholder="Имя" id="name" name="name" v-model="name" required).talks__form-input 
                                 label(for="email" class="talks__form-label")
-                                input(placeholder="Email" id="email" name="email" v-model="email").talks__form-input 
+                                input(placeholder="Email" id="email" name="email" v-model="email" required).talks__form-input 
                                 label(for="text" class="talks__form-label")
-                                textarea(id="text" name="text" placeholder="Ваше сообщение" v-model="text").talks__form__area
+                                textarea(id="text" name="text" placeholder="Ваше сообщение" v-model="text" required).talks__form__area
                                 .btn__container.talks__form-container_inner
                                     ul.btn__list.btn__list-full-width
                                         li.btn__item.btn__item-width
