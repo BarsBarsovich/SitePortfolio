@@ -5,8 +5,9 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | Мои работы</title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/tweenmax.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/TweenMax.min.js"></script>
 <script src="./js/three.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -95,11 +96,11 @@
                   <div class="talks__form-container_inner">                         
                     <div class="block-subtitle">Связаться со мной</div>
                     <label class="talks__form-label" for="name"></label>
-                    <input class="talks__form-input" placeholder="Имя" id="name" name="name" v-model="name">
+                    <input class="talks__form-input" placeholder="Имя" id="name" name="name" v-model="name" required>
                     <label class="talks__form-label" for="email"></label>
-                    <input class="talks__form-input" placeholder="Email" id="email" name="email" v-model="email">
+                    <input class="talks__form-input" placeholder="Email" id="email" name="email" v-model="email" required>
                     <label class="talks__form-label" for="text"></label>
-                    <textarea class="talks__form__area" id="text" name="text" placeholder="Ваше сообщение" v-model="text"></textarea>
+                    <textarea class="talks__form__area" id="text" name="text" placeholder="Ваше сообщение" v-model="text" required></textarea>
                     <div class="btn__container talks__form-container_inner">
                       <ul class="btn__list btn__list-full-width">
                         <li class="btn__item btn__item-width">
@@ -163,6 +164,14 @@
             </div>
           </footer>
         </section>
+        <div class="fullscreen" id="fullscreen">
+          <ul class="fullscreen__list">
+            <li class="fullscreen__item"> <a class="fullscreen__item--link" href="works.html">Мои работы</a></li>
+            <li class="fullscreen__item"> <a class="fullscreen__item--link" href="about.html">обо мне </a></li>
+            <li class="fullscreen__item"><a class="fullscreen__item--link" href="blog.html">Блог</a></li>
+            <li class="fullscreen__item"> <a class="fullscreen__item--link" href="auth.html">авторизация</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <script type="text/x-template" id="skills-list">

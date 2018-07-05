@@ -669,18 +669,11 @@ p {
   background: transparent;
 }
 
-.card__back {
-  display: none;
-}
-
 .card__back,
 .card__front--active {
   -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-.card__front--active {
   position: absolute;
+  transform: rotateY(180deg);
 }
 
 .card__back--active {
@@ -990,6 +983,52 @@ p {
   font-weight: 700;
 }
 
+.fullscreen {
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  background: rgba(108,156,90,.87);
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.fullscreen,
+.fullscreen__list {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.fullscreen__list {
+  -ms-flex-direction: column;
+  -ms-flex-pack: distribute;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  color: #fff;
+  flex-direction: column;
+  font-family: Roboto,sans-serif;
+  font-size: 35px;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.fullscreen__item--link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fullscreen--active {
+  opacity: 1;
+}
+
 #hamburger {
   background: none;
   border: none;
@@ -1008,27 +1047,7 @@ p {
 #hamburger:focus,
 #hamburger:hover {
   -webkit-transform: scale(1.1);
-  -webkit-transition: 1ms;
   transform: scale(1.1);
-  transition: 1ms;
-}
-
-#hamburger:hover span:after {
-  background: red;
-  border: 1px solid red;
-  color: red;
-}
-
-#hamburger:hover span {
-  background: #00f;
-  border: 1px solid #00f;
-  color: #00f;
-}
-
-#hamburger:hover span:before {
-  background: #fff;
-  border: 1px solid #000;
-  color: #fff;
 }
 
 .hamburger__span {
@@ -1041,6 +1060,7 @@ p {
   position: absolute;
   top: 50%;
   width: 40px;
+  z-index: 2000;
 }
 
 .hamburger__span--active {
@@ -1171,7 +1191,6 @@ canvas {
 }
 
 .map {
-  background: url(../images/map.bg.png) 50%/cover no-repeat;
   height: 100%;
   padding-bottom: 120px;
   position: relative;
@@ -1772,6 +1791,7 @@ canvas {
 
 .talks {
   background: url(../images/talks/task.bg.png) top/cover no-repeat;
+  margin-top: 159px;
   padding-bottom: 120px;
   position: relative;
 }
@@ -2076,6 +2096,7 @@ canvas {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  padding-top: 120px;
 }
 
 .works,

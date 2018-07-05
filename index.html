@@ -5,8 +5,9 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | </title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/tweenmax.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/TweenMax.min.js"></script>
 <script src="./js/three.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -89,7 +90,7 @@
                 </div>
                 <div class="btn__container">
                   <ul class="btn__list btn__list-padding">
-                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="/">На главную</a></li>
+                    <li class="btn__item btn__item-width" id="homeButton"><a class="btn__nav-link" href="/" v-on:click="returnToHome">На главную</a></li>
                     <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
                   </ul>
                 </div>
