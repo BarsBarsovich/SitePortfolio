@@ -5,6 +5,7 @@ block variables
 
 block scripts
   script(src='./assets/scripts/about.bundle.js')  
+  
 
 
 block content
@@ -39,7 +40,7 @@ block content
         .about__right-content
           #skills-container
     section.map
-      .google-map
+      .google-map#map
       .map__data
         .contacts
           h2.contacts__title
@@ -60,3 +61,16 @@ block content
                   .contacts-row.contacts__info #{item[1]}
     include ../blocks/fullscreen.pug
       include ../blocks/footer__about.pug
+
+
+    script.
+      ymaps.ready(init);
+      function init(){
+            var myMap = new ymaps.Map("map", {
+              center: [59.94, 30.32],
+              zoom: 12,
+              controls: ['zoomControl'],
+              behaviors: ['drag']
+          });
+
+      }
