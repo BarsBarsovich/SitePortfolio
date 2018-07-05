@@ -76,6 +76,13 @@ function images() {
         .pipe(gulp.dest(paths.img.dest));
 }
 
+function jsCopy(){
+    return gulp.src('./src/assets/js/*')
+        .pipe(gulp.dest('./build/js'));
+}
+
+
+
 //compile css
 function styles() {
     return gulp.src(paths.styles.main)
@@ -167,3 +174,4 @@ exports.sprite = sprite;
 exports.fonts = fonts
 exports.deploy = deploy;
 exports.scripts = scripts;
+exports.jsCopy = jsCopy;
