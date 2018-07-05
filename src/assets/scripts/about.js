@@ -2,6 +2,7 @@ import "./modules/skills";
 import "./modules/hamburger";
 import preloader from "./modules/preloader";
 import Vue from "vue";
+// import $ from "jquery";
 
 new Vue({
   el: "#form__order",

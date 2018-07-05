@@ -1,4 +1,5 @@
 import Vue from "vue";
+import $ from "jquery";
 
 new Vue({
   el: "#hamburger",
@@ -7,9 +8,10 @@ new Vue({
   },
   methods: {
     changeCaption: function() {
-      console.log("initial acitive" + this.active);
+      console.log("zae");
       this.active = !this.active;
-      console.log("change active" + this.active);
+      // $(".card__back").toggleClass("card__back--active");
+      $("#fullscreen").toggleClass("fullscreen--active");
     }
   }
 });
