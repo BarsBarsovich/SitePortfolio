@@ -45,14 +45,14 @@ const paths = {
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, fonts, scripts),
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts,jsCopy),
     gulp.parallel(watch, server)
 ));
 
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, sprite, fonts, scripts)
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts, jsCopy)
 ));
 
 function watch() {
