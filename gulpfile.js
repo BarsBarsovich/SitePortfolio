@@ -58,7 +58,7 @@ gulp.task('build', gulp.series(
 function watch() {
     gulp.watch(paths.styles.styles, styles);
     gulp.watch(paths.templates.pages, templates);
-    gulp.watch(paths.js.main, templates);
+    gulp.watch(paths.js.main, scripts);
 
 }
 
@@ -75,6 +75,13 @@ function images() {
         .src(paths.img.main)
         .pipe(gulp.dest(paths.img.dest));
 }
+
+function jsCopy(){
+    return gulp.src('./src/assets/js/*')
+        .pipe(gulp.dest('./build/js'));
+}
+
+
 
 //compile css
 function styles() {
@@ -167,3 +174,4 @@ exports.sprite = sprite;
 exports.fonts = fonts
 exports.deploy = deploy;
 exports.scripts = scripts;
+exports.jsCopy = jsCopy;

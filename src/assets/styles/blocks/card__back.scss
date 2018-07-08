@@ -1,5 +1,23 @@
 .card__back {
-    display: none;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.card__front--active {
+    // display: none;
+    position: absolute;
+    transform: rotateY(180deg)
+}
+
+.card__back--active {
+    transform: rotateY(360deg);
+    display: flex;
+}
+
+.card__back,
+.card__front {
+    transition: 1s;
+    backface-visibility: hidden;
 }
 
 .card__back-input {
@@ -22,18 +40,19 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    position: relative;
 }
 
 .card__back-input-logo-user {
-    left: 459px;
+    left: 20px;
     position: absolute;
-    top: 336px;
+    top: 0;
 }
 
 .card__back-input-logo-pass {
-    left: 459px;
+    left: 19px;
     position: absolute;
-    top: 402px;
+    top: 65px;
 }
 
 .card__back-label {

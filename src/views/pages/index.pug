@@ -1,11 +1,14 @@
 extends ../main.layout.pug
 
+block scripts
+    script(src='./assets/scripts/index.bundle.js')
+
 block content
     
         #card.card
             header.header
                 .header__container
-                    button.header__btn Авторизоваться
+                    button(v-on:click="formAnimation").header__btn#loginButton Авторизоваться
             .card__wrapper
                 .card__front
                     .card__container
@@ -59,16 +62,21 @@ block content
                                             
                         .btn__container
                             ul.btn__list.btn__list-padding
-                                li.btn__item.btn__item-width
-                                    a(href="/" class="btn__nav-link") На главную
+                                li.btn__item.btn__item-width#homeButton
+                                    a(href="/" class="btn__nav-link" v-on:click="returnToHome") На главную
                                 li.btn__item.btn__item-width
                                     a(href="about.html" class="btn__nav-link") Войти
+
+
+
+
                     
             .footer.footer__about
                 .footer__row
                     .footer__content.footer__content--nocolor
                         span.footer__content-author © Борис Дрябин |
                         span.footer__content-desc Создано с любовью в LoftSchool | 2018
+            
 
         script#vertexShader(type='x-shader/x-vertex').
             varying vec2 v_position;

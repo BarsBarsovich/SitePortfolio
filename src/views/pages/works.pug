@@ -6,57 +6,16 @@ block variables
 block content
         include ../blocks/hero.pug
 
-        section.works
+        section.works#works
             .triangle
                 .triangle__left.triangle__left_transparent
             .triangle
                 .triangle__right.triangle__right_transparent                
-            .block-title мои работы
+            .block-title.block-title-margin мои работы
+
+            .slider-container
+                #slider-component
             
-            .slider
-                .slider__info-container
-                    .slider__info
-                        .slider__info-title
-                            .block-subtitle Сайт школы онлайн <br/> Образования
-                    .slider__info-skills.works__left-title Html, css, javascript
-                    .slider__info--button
-                        img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
-                        button.works__left__btn-button Посмотреть сайт
-                .slider__display
-                    img(src="./assets/images/works.png", alt="").slider__big-pic
-                .slider__buttons
-                    .slider__button                     
-                        img(src="./assets/images/page-down.png", alt="" class="slider__button--logo")
-                        +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
-                    .slider__button.slider__button-next
-                        .slider__button-img-wrap
-                            img(src="./assets/images/page-up.png",class="slider__button--logo" alt="")
-                            +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
- 
-            //- .works__container
-            //-     .works__left
-            //-         .works__left-container
-            //-             .block-subtitle 
-            //-             .works__left-title HTML , CSS, JAVASCRIPT
-            //-             .works__left__btn
-            //-                 img(src="./assets/images/link.png", alt="" class="works__left__btn-icon")
-            //-                 button.works__left__btn-button Посмотреть сайт
-
-            //-     .works__right 
-
-            //-         .works__right-container
-            //-             .slider
-            //-                 .slider__img-container
-            //-                     img(src="./assets/images/works.png", alt="").slider__logo                                
-            //-                 .slider__arrows
-            //-                     .slider__left
-            //-                         img(src="./assets/images/page-down.png", class="slider__left-logo" alt="")
-            //-                         +icon('portf_arrow_down', 'arrow__slider arrow__slider-left')
-            //-                     .slider__right
-            //-                         img(src="./assets/images/page-up.png",class="slider__right-logo" alt="")
-            //-                         +icon('portf_arrow_down', 'arrow__slider arrow__slider-right')
-                        //- .block__title Сайт школы онлайн Образования 
-
         section.talks
             .talks__container
                 .block-title.block-title-margin Что обо мне <br/>говорят
@@ -79,27 +38,28 @@ block content
                             .talks__item-text-desc — преподаватель
                 .talks__form-container
                     .talks__form
-                        form.talks__form__form                      
+                        form(id="form__order" v-on:submit="checkForm" method="post").talks__form__form
                             .talks__form-container_inner                          
                                 .block-subtitle Связаться со мной
                                 label(for="name" class="talks__form-label")
-                                input(placeholder="Имя" id="name" name="name").talks__form-input 
+                                input(placeholder="Имя" id="name" name="name" v-model="name" required).talks__form-input 
                                 label(for="email" class="talks__form-label")
-                                input(placeholder="Email" id="email" name="email").talks__form-input 
+                                input(placeholder="Email" id="email" name="email" v-model="email" required).talks__form-input 
                                 label(for="text" class="talks__form-label")
-                                textarea(id="text" name="text" placeholder="Ваше сообщение").talks__form__area
+                                textarea(id="text" name="text" placeholder="Ваше сообщение" v-model="text" required).talks__form__area
                                 .btn__container.talks__form-container_inner
                                     ul.btn__list.btn__list-full-width
                                         li.btn__item.btn__item-width
-                                            a(href="#" class="btn__nav-link") Отправить
+                                            button(type="submit"  class="btn__nav-link btn__nav-link-transparent" v-on:click="submitForm") Отправить
                                         li.btn__item.btn__item-width
-                                            a(href="#" class="btn__nav-link") Очистить
+                                            button(type="reset" class="btn__nav-link btn__nav-link-transparent" v-on:click="resetForm") Очистить
                 .talks__arrow
                     +icon('portf_arrow_down', 'arrow_up')
 
 
 
             include ../blocks/footer__about.pug 
+        include ../blocks/fullscreen.pug
 
 block scripts
-    //- script(src='assets/scripts/works.bundle.js')
+    script(src='./assets/scripts/works.bundle.js')
