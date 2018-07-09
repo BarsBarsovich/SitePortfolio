@@ -7,7 +7,7 @@ block scripts
     script(src='./assets/scripts/blog.bundle.js')    
 
 block content
-        section.hero.blog#blog
+        section.hero.blog
             -
                 var socials = [
                 ['vk', 'http://vk.com'],
@@ -23,22 +23,16 @@ block content
                             .blog__caption Блог
                             .user__info Статьи, которые я написал
 
-        section.blog      
+        section.blog#blog      
             .blog__content
                 .blog__left
                     .triangle
                         .triangle__left.triangle__left_transparent
-                    ul.blog__list                           
-                        li.blog__item 
-                            a(href="#" class="blog__item-link blog__item-link_active") Самое важное в SASS                           
-                                +image('border-right.png','','blog__items-border')
-                        li.blog__item 
-                            a(href="#" class="blog__item-link") Приёмы в вёрстке, без которых <br/> не обходится ни один сайт                                                           
-                        li.blog__item 
-                            a(href="#" class="blog__item-link") Самый необходимый набор Gulp <br/> плагинов
-                        li.blog__item 
-                            a(href="#" class="blog__item-link") Почему я выбрал Jade
-
+                    ul.blog__list      
+                        li.blog__item(v-for="item in postList")
+                            a(href="#" v-bind:class="[item[4] == 1 ? 'blog__item-link blog__item-link_active': 'blog__item-link']") {{  item[0] }}
+                                div(v-if="item[4] == 1")
+                                    +image('border-right.png','','blog__items-border')
                 .blog__right
                     .triangle
                         .triangle__right.triangle__right_transparent

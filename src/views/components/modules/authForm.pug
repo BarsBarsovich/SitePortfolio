@@ -1,0 +1,32 @@
+.card__container
+    .block-subtitle.block-subtitle-auth Авторизуйтесь
+    .card__back-login-container
+        label(for="login" class="card__back-label visually-hidden") логин
+        img(src="./assets/images/login-icon.png", alt="").card__back-input-logo-user
+        input(placeholder="Логин" name="login" id="login" v-model="user.name").card__back-input
+        label(for="password" class="card__back-label visually-hidden") пароль
+        img(src="./assets/images/password-icon.png", alt="").card__back-input-logo-pass
+        input(placeholder="Пароль" name="password" id="password" v-model="user.password").card__back-input
+    .card__back-checkbox-container                                            
+        input(type="checkbox" id="notRobot" class="card__back-checkbox")
+        label(for="notRobot" class="card__back-label_checkbox") Я человек
+    //- .radio
+    .radio
+        .card__back-title Вы точно не робот
+        .card__back-label-container
+            label.radio__label.visually-hidden Да
+                input(type="radio" class="radio" name="radio-test")
+                span.radio-custom
+                span.label Да
+            
+            label.radio__second-label.visually-hidden не уверен
+                input(type="radio" class="radio" name="radio-test")
+                span.radio-custom
+                span.label Не уверен
+                        
+    .btn__container
+        ul.btn__list.btn__list-padding
+            li.btn__item.btn__item-width#homeButton
+                a(href="/" class="btn__nav-link" v-on:click="returnToHome") На главную
+            li.btn__item.btn__item-width
+                a(href="" class="btn__nav-link" v-on:click="login") Войти
