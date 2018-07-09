@@ -14,6 +14,7 @@
 
 <script>
 import { mapActions } from "vuex";
+import axios from "axios";
 export default {
   data() {
     return {
@@ -34,13 +35,20 @@ export default {
       this.work.photo = files[0];
     },
     addNewWork() {
+      alert("worked");
       const formData = new FormData();
 
       Object.keys(this.work).forEach(prop => {
         formData.append(prop, this.work[prop]);
       });
 
-      this.addWork(formData);
+      let temp =
+        "http://webdev-api.loftschool.com/works?token=" +
+        localStorage.getItem("token");
+      console.log(this.work.photo);
+      axios.post(temp, this.work).then(response => {
+        alert("bench");
+      });
     }
   }
 };

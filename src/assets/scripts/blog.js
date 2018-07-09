@@ -19,7 +19,12 @@ new Vue({
     let tempArray = [];
     axios.get("http://webdev-api.loftschool.com/posts/12").then(response => {
       for (let item of response.data) {
-        tempArray.push([item.title, item.date, item.content, ""]);
+        tempArray.push([
+          item.title,
+          this.toNormalTime(item.date),
+          item.content,
+          ""
+        ]);
       }
       this.postList = tempArray;
       this.postList[0][4] = 1;
@@ -27,15 +32,14 @@ new Vue({
       for (let i = 0; i < this.postList.length; i++) {
         console.log(this.postList[i]);
       }
-
-      // this.postList.map(item => console.log(item.title));
-      // console.log(this.postList[0].title);
     });
   },
   methods: {
-    formAnimation: function() {
-      cosole.log("animation");
-      // $('')
+    toNormalTime: function(unix_timestamp) {
+      console.log(unix_timestamp);
+      var date = new Date();
+      date.setTime(unix_timestamp);
+      return date.getDate();
     }
   }
 });

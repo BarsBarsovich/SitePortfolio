@@ -37,16 +37,9 @@ export default {
         "http://webdev-api.loftschool.com/posts?token=" +
         localStorage.getItem("token");
 
-      // alert(temp);
-
       axios.post(temp, this.blog).then(response => {
-        alert(response.status);
-        // if (response.status === 200) {
-        //   alert(posted);
-        // }
+        // show dialog message
       });
-
-      //this.addPost(formData);
     }
   }
 };
