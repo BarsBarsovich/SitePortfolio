@@ -69,9 +69,9 @@
                 <div class="block-subtitle block-subtitle-auth">Авторизуйтесь</div>
                 <div class="card__back-login-container">
                   <label class="card__back-label visually-hidden" for="login">логин</label><img class="card__back-input-logo-user" src="./assets/images/login-icon.png" alt="">
-                  <input class="card__back-input" placeholder="Логин" name="login" id="login">
+                  <input class="card__back-input" placeholder="Логин" name="login" id="login" v-model="user.name">
                   <label class="card__back-label visually-hidden" for="password">пароль</label><img class="card__back-input-logo-pass" src="./assets/images/password-icon.png" alt="">
-                  <input class="card__back-input" placeholder="Пароль" name="password" id="password">
+                  <input class="card__back-input" placeholder="Пароль" name="password" id="password" v-model="user.password">
                 </div>
                 <div class="card__back-checkbox-container">                                           
                   <input class="card__back-checkbox" type="checkbox" id="notRobot">
@@ -91,7 +91,7 @@
                 <div class="btn__container">
                   <ul class="btn__list btn__list-padding">
                     <li class="btn__item btn__item-width" id="homeButton"><a class="btn__nav-link" href="/" v-on:click="returnToHome">На главную</a></li>
-                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
+                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="" v-on:click="login">Войти</a></li>
                   </ul>
                 </div>
               </div>
