@@ -1,4 +1,5 @@
 import Vue from "vue";
+import axios from "axios";
 
 const info = {
   template: "#slider-info",
@@ -81,7 +82,7 @@ const buttons = {
           break;
       }
 
-      return worksArray[this.currentIndex];
+      return "./" + worksArray[this.currentIndex];
     }
   }
 };
@@ -108,8 +109,17 @@ new Vue({
     }
   },
   created() {
-    this.works = require("../../../data/works.json");
-    this.currentWork = this.works[0];
+    var tempArray = [];
+    axios
+      .get("http://webdev-api.loftschool.com/works/12")
+      .then(function(response) {
+        this.works = response.data;
+      });
+
+    // console.log("tem" + tempArray);
+
+    console.log("w0" + this.works[0]);
+    this.currentWork = tempArray[0];
   },
   methods: {
     handleSlide(direction) {

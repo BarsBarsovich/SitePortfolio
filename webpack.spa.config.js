@@ -7,7 +7,7 @@ module.exports = {
     admin: path.resolve(__dirname, "src/admin/main.js")
   },
   output: {
-    path: path.resolve(__dirname, "dist/admin"),
+    path: path.resolve(__dirname, "build/admin"),
     filename: "[name].bundle.js"
   },
   module: {
@@ -24,7 +24,10 @@ module.exports = {
         enforce: "pre",
         test: /\.vue$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
+        loader: "eslint-loader",
+        options: {
+          fix: true
+        }
       },
       {
         test: /\.vue$/,
@@ -56,6 +59,7 @@ module.exports = {
     extensions: ["*", ".js", ".vue", ".json"]
   },
   devServer: {
+    port:3000,
     historyApiFallback: true,
     noInfo: false,
     overlay: true
