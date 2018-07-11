@@ -26,6 +26,8 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from "vuex";
+import axios from "axios";
+
 export default {
   props: {
     editmode: {
@@ -56,13 +58,19 @@ export default {
   methods: {
     ...mapActions(["addNewSkill", "removeExistedSkill"]),
     addSkill() {
-      const addedSkill = this.addNewSkill(this.newSkill);
+      // const addedSkill = this.addNewSkill(this.newSkill);
+      let temp =
+        "http://webdev-api.loftschool.com/skills?token=" +
+        localStorage.getItem("token");
+      console.log(this.newSkill);
+      axios.post(temp, this.newSkill);
 
       this.newSkill.title = "";
       this.newSkill.percents = "";
     },
     removeItem() {
-      this.removeExistedSkill(this.skill.id);
+      let temp = "http://webdev-api.loftschool.com/skills" + this.skill.id;
+      axios.delete(temp, addedSkill);
     }
   }
 };
