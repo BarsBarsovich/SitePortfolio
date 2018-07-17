@@ -5,7 +5,7 @@ block scripts
 
 block content
     
-        #card.card
+        .card#card
             header.header
                 .header__container
                     button(v-on:click="formAnimation").header__btn#loginButton Авторизоваться
@@ -42,7 +42,7 @@ block content
                             input(placeholder="Логин" name="login" id="login").card__back-input
                             label(for="password" class="card__back-label visually-hidden") пароль
                             img(src="./assets/images/password-icon.png", alt="").card__back-input-logo-pass
-                            input(placeholder="Пароль" name="password" id="password").card__back-input
+                            input(placeholder="Пароль" name="password" id="password" type="password").card__back-input
                         .card__back-checkbox-container                                            
                             input(type="checkbox" id="notRobot" class="card__back-checkbox")
                             label(for="notRobot" class="card__back-label_checkbox") Я человек
@@ -165,7 +165,7 @@ block content
             animate();
             
             function init() {
-                container = document.getElementById( 'card' );
+                container = document.getElementById( 'main' );
                 
                 camera = new THREE.Camera();
                 //camera = new THREE.PerspectiveCamera(145, window.innerWidth / window.innerHeight, 1, 5000 );

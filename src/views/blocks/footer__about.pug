@@ -6,7 +6,7 @@ footer.footer.footer__about
           nav.menu
             ul.menu__list
               -
-                var myWorks = [['my-work.html','Мои работы'], ['about.html', 'Обо мне'], ['blog.html', 'Блог'] ,['#', 'Авторизация'] ]
+                var myWorks = [['my-work.html','Мои работы'], ['about.html', 'Обо мне'], ['blog.html', 'Блог'] ]
               each item in myWorks
                 li.menu__item                
                   a(href=item[0] class="menu__item-link").menu__link #{item[1]}

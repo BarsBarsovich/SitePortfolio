@@ -10,11 +10,11 @@ html(lang="ru")
     
     title Portfolio | #{title}
     link(rel='stylesheet' href='./assets/styles/main.min.css')
-    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/tweenMax.min.js"></script>
     <script src="./js/three.min.js"></script>
     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
   body
-    .wrapper
+    .wrapper#main
       include ./blocks/preloader.pug
       .maincontent
         block content
