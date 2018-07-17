@@ -5,12 +5,12 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | </title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/tweenMax.min.js"></script>
 <script src="./js/three.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="main">
       <div class="preloader">
         <div class="preloader__spinner">
           <div class="preloader__animation"></div>
@@ -69,9 +69,9 @@
                 <div class="block-subtitle block-subtitle-auth">Авторизуйтесь</div>
                 <div class="card__back-login-container">
                   <label class="card__back-label visually-hidden" for="login">логин</label><img class="card__back-input-logo-user" src="./assets/images/login-icon.png" alt="">
-                  <input class="card__back-input" placeholder="Логин" name="login" id="login" v-model="user.name">
+                  <input class="card__back-input" placeholder="Логин" name="login" id="login">
                   <label class="card__back-label visually-hidden" for="password">пароль</label><img class="card__back-input-logo-pass" src="./assets/images/password-icon.png" alt="">
-                  <input class="card__back-input" placeholder="Пароль" name="password" id="password" v-model="user.password">
+                  <input class="card__back-input" placeholder="Пароль" name="password" id="password" type="password">
                 </div>
                 <div class="card__back-checkbox-container">                                           
                   <input class="card__back-checkbox" type="checkbox" id="notRobot">
@@ -91,7 +91,7 @@
                 <div class="btn__container">
                   <ul class="btn__list btn__list-padding">
                     <li class="btn__item btn__item-width" id="homeButton"><a class="btn__nav-link" href="/" v-on:click="returnToHome">На главную</a></li>
-                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="" v-on:click="login">Войти</a></li>
+                    <li class="btn__item btn__item-width"><a class="btn__nav-link" href="about.html">Войти</a></li>
                   </ul>
                 </div>
               </div>
@@ -192,7 +192,7 @@
           animate();
           
           function init() {
-              container = document.getElementById( 'card' );
+              container = document.getElementById( 'main' );
               
               camera = new THREE.Camera();
               //camera = new THREE.PerspectiveCamera(145, window.innerWidth / window.innerHeight, 1, 5000 );

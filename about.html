@@ -5,12 +5,12 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Portfolio | Обо мне</title>
-    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css"><script src="./js/tweenMax.min.js"></script>
 <script src="./js/three.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="main">
       <div class="preloader">
         <div class="preloader__spinner">
           <div class="preloader__animation"></div>
@@ -94,49 +94,48 @@
           </div>
         </section>
         <section class="map">
-          <div class="google-map" id="map">
-            <div class="map__data">
-              <div class="contacts">
-                <h2 class="contacts__title">
-                  <div class="block-subtitle">Контакты</div>
-                </h2>
-                <address class="contacts__data">
-                  <ul class="contacts__list">
-                    <li class="contacts__item contacts-row">
-                      <div class="contacts-row contacts__icon">
-                        <svg class="contacts__icon-img">
-                          <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts-row contacts__info">mr_ghost6</div>
-                    </li>
-                    <li class="contacts__item contacts-row">
-                      <div class="contacts-row contacts__icon">
-                        <svg class="contacts__icon-img">
-                          <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts-row contacts__info">911</div>
-                    </li>
-                    <li class="contacts__item contacts-row">
-                      <div class="contacts-row contacts__icon">
-                        <svg class="contacts__icon-img">
-                          <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts-row contacts__info">skype_kdn</div>
-                    </li>
-                    <li class="contacts__item contacts-row">
-                      <div class="contacts-row contacts__icon">
-                        <svg class="contacts__icon-img">
-                          <use xlink:href="./assets/images/icons/sprite.svg#envelope2"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts-row contacts__info">1462155@mail.ru</div>
-                    </li>
-                  </ul>
-                </address>
-              </div>
+          <div class="google-map" id="map"></div>
+          <div class="map__data">
+            <div class="contacts">
+              <h2 class="contacts__title">
+                <div class="block-subtitle">Контакты</div>
+              </h2>
+              <address class="contacts__data">
+                <ul class="contacts__list">
+                  <li class="contacts__item contacts-row">
+                    <div class="contacts-row contacts__icon">
+                      <svg class="contacts__icon-img">
+                        <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts-row contacts__info">mr_ghost6</div>
+                  </li>
+                  <li class="contacts__item contacts-row">
+                    <div class="contacts-row contacts__icon">
+                      <svg class="contacts__icon-img">
+                        <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts-row contacts__info">911</div>
+                  </li>
+                  <li class="contacts__item contacts-row">
+                    <div class="contacts-row contacts__icon">
+                      <svg class="contacts__icon-img">
+                        <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts-row contacts__info">skype_kdn</div>
+                  </li>
+                  <li class="contacts__item contacts-row">
+                    <div class="contacts-row contacts__icon">
+                      <svg class="contacts__icon-img">
+                        <use xlink:href="./assets/images/icons/sprite.svg#envelope2"></use>
+                      </svg>
+                    </div>
+                    <div class="contacts-row contacts__info">1462155@mail.ru</div>
+                  </li>
+                </ul>
+              </address>
             </div>
           </div>
           <footer class="footer footer__about">
@@ -150,7 +149,6 @@
                     <li class="menu__item">               <a class="menu__item-link menu__link" href="my-work.html">Мои работы</a></li>
                     <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
                     <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
-                    <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
                   </ul>
                   <ul class="socials socials-margin">
                     <li class="socials__item"><a class="socials__link" href="http://vk.com">

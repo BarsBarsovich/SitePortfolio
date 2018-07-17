@@ -838,6 +838,10 @@ p {
   margin-top: 36px;
 }
 
+.google-map {
+  height: 100%;
+}
+
 .contacts {
   background: hsla(72,20%,95%,.85);
   height: 309px;
@@ -985,7 +989,6 @@ p {
   background: rgba(108,156,90,.87);
   justify-content: center;
   left: 0;
-  opacity: 0;
   position: fixed;
   top: 0;
   visibility: hidden;
@@ -1040,7 +1043,7 @@ p {
   position: relative;
   text-decoration: none;
   width: 50px;
-  z-index: 10000;
+  z-index: 20000;
 }
 
 #hamburger:focus,
@@ -1209,11 +1212,12 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.google-map,
-.map__data {
-  height: 100%;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  top: 25%;
 }
 
 .menu__list {
@@ -2069,6 +2073,7 @@ canvas {
   -webkit-box-orient: vertical;
   background-color: rgba(18,38,32,.6);
   flex-direction: column;
+  padding-top: 20px;
   width: 380px;
 }
 
